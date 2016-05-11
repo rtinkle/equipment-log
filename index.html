@@ -1,0 +1,3273 @@
+﻿<!DOCTYPE HTML>
+<html manifest="OfflineApp.appcache">
+<head>
+<meta charset="utf-8">
+<title>Equipment Log</title>
+<meta name="generator" content="NSB/AppStudio 5.2.1.3$dzjp" />
+<meta name='date' content='2016-05-09 16:01:08.875000' />
+<meta name='version' content='3.0.0' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+<meta name='apple-mobile-web-app-capable' content='YES' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='apple-mobile-web-app-title' content='Equipment Log' />
+<meta name='copyright' content='Copyright 2015 RTT Company' />
+<noscript><h1>JavaScript must be enabled!</h1></noscript>
+<link rel='apple-touch-icon' href='nsb/images/LauncherIcon57.png' />
+<!-- Startup images -->
+<!-- iOS 6 & 7 iPad (retina, portrait) -->
+<link href='splash/ios/1536x2008.png'
+      media='(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 2)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 & 7 iPad (retina, landscape) -->
+<link href='splash/ios/1496x2048.png'
+      media='(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 2)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 iPad (portrait) -->
+<link href='splash/ios/768x1004.png'
+      media='(device-width: 768px) and (device-height: 1024px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 1)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 iPad (landscape) -->
+<link href='splash/ios/748x1024.png'
+      media='(device-width: 768px) and (device-height: 1024px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 1)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 & 7 iPhone 5 -->
+<link href='splash/ios/640x1096.png'
+      media='(device-width: 320px) and (device-height: 568px)
+         and (-webkit-device-pixel-ratio: 2)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 & 7 iPhone (retina) -->
+<link href='splash/ios/640x920.png'
+      media='(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 2)'
+      rel='apple-touch-startup-image'>
+<!-- iOS 6 iPhone -->
+<link href='splash/ios/320x460.png'
+      media='(device-width: 320px) and (device-height: 480px)
+         and (-webkit-device-pixel-ratio: 1)'
+      rel='apple-touch-startup-image'>
+<!-- iPhone 6 Portrait -->
+<link href='splash/ios/750x1294.png'
+      media='(device-width: 375px) and (device-height: 667px)
+         and (-webkit-device-pixel-ratio: 2)'
+      rel='apple-touch-startup-image'>
+<!-- iPhone 6 Plus Portrait -->
+<link href='splash/ios/1242x2148.png'
+      media='(device-width: 414px) and (device-height: 736px)
+         and (orientation: portrait)
+         and (-webkit-device-pixel-ratio: 3)'
+      rel='apple-touch-startup-image'>
+<!-- iPhone 6 Plus Landscape -->
+<link href='splash/ios/2208x1182.png'
+      media='(device-width: 414px) and (device-height: 736px)
+         and (orientation: landscape)
+         and (-webkit-device-pixel-ratio: 3)'
+      rel='apple-touch-startup-image'>
+<link rel='shortcut icon' sizes='192x192' href='AvailRecoveryLogo192x192.png' />
+<link href="nsb/nsbstyle.css" rel="stylesheet">
+<script src="nsb/jquery.js"></script>
+<link href="nsb/jquery.modal.css" rel="stylesheet">
+<script src="nsb/hfunc.js"></script>
+<script src="nsb/jquery.modal.min.js"></script>
+<script src="nsb/fastclick.js"></script>
+<script src="nsb/jqmFunctions.js"></script>
+<link href="nsb/jquery.mobile.css" rel="stylesheet">
+<script src="nsb/jquery.mobile.js"></script>
+<script src="nsb/iscroll.js"></script>
+<script src="nsb/nsbFunctions.js"></script>
+
+<link href="chromeManifest.json" rel="manifest">
+
+<meta name="google" content="notranslate" />
+
+<script src="https://apis.google.com/js/client.js?onload=checkAuth">
+</script>
+
+<script type="text/javascript">
+// create CSS media query to hide nav footer when keyboard is dispaly (keyboard detected by view window shrinking)
+    document.write( '<style>#ftrNavBar{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#ftrNavBar{visibility:visible}</style>' );
+    document.write( '<style>#ftrNavBarBrowse{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#ftrNavBarBrowse{visibility:visible}</style>' );
+    document.write( '<style>#ftrNavBarSubmit{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#ftrNavBarSubmit{visibility:visible}</style>' );
+    document.write( '<style>#ftrNavBarDefaults{visibility:hidden}@media(min-height:' + ($( window ).height() - 10) + 'px){#ftrNavBarDefaults{visibility:visible}</style>' );
+
+</script>
+<style type="text/css">
+#frmEnter {background:inherit;}
+#htmlMode_scroller {position:absolute; overflow:hidden; width:164px; height:24px; left:17px; top:2px;}
+#htmlMode {position:absolute; left:0px; top:0px; height:24px; width:100%;}
+#htmlMsg_scroller {position:absolute; overflow:hidden; width:125px; height:24px; left:188px; top:2px;}
+#htmlMsg {position:absolute; left:0px; top:0px; height:24px; width:100%;}
+#lblCategory {position:absolute; left:17px; right:auto; top:46px; bottom:auto; height:16px; width:102px;}
+#selCategory {position:absolute; left:138px; right:auto; top:36px; bottom:auto; height:30px; width:210px;}
+#lblAssetTagNumber {position:absolute; left:17px; right:auto; top:87px; bottom:auto; height:16px; width:102px;}
+#txtAssetTagNumber_wrapper {position:absolute; left:138px; right:auto; top:77px; bottom:auto; height:30px; width:210px;}
+#txtAssetTagNumber_wrapper {margin:0px; box-sizing:border-box; }
+#lblSerialNumber {position:absolute; left:17px; right:auto; top:126px; bottom:auto; height:16px; width:102px;}
+#txtSerialNumber_wrapper {position:absolute; left:138px; right:auto; top:117px; bottom:auto; height:30px; width:210px;}
+#txtSerialNumber_wrapper {margin:0px; box-sizing:border-box; }
+#lblDriveSerials {position:absolute; left:17px; right:auto; top:160px; bottom:auto; height:16px; width:102px;}
+#txtaDriveSerials {position:absolute; left:138px; right:auto; top:157px; bottom:auto; height:44px; width:210px;}
+#lblMake {position:absolute; left:17px; right:auto; top:220px; bottom:auto; height:16px; width:102px;}
+#txtMake_wrapper {position:absolute; left:138px; right:auto; top:211px; bottom:auto; height:30px; width:210px;}
+#txtMake_wrapper {margin:0px; box-sizing:border-box; }
+#lblModel {position:absolute; left:17px; right:auto; top:261px; bottom:auto; height:16px; width:102px;}
+#txtModel_wrapper {position:absolute; left:138px; right:auto; top:252px; bottom:auto; height:30px; width:210px;}
+#txtModel_wrapper {margin:0px; box-sizing:border-box; }
+#lblMonitorSize {position:absolute; left:17px; right:auto; top:301px; bottom:auto; height:16px; width:115px;}
+#txtMonitorSize_wrapper {position:absolute; left:138px; right:auto; top:292px; bottom:auto; height:30px; width:210px;}
+#txtMonitorSize_wrapper {margin:0px; box-sizing:border-box; }
+#lblItemQty {position:absolute; left:17px; right:auto; top:341px; bottom:auto; height:16px; width:102px;}
+#txtItemQty_wrapper {position:absolute; left:138px; right:auto; top:332px; bottom:auto; height:30px; width:80px;}
+#txtItemQty_wrapper {margin:0px; box-sizing:border-box; }
+#lblCondition {position:absolute; left:17px; right:auto; top:381px; bottom:auto; height:16px; width:102px;}
+#txtaCondition {position:absolute; left:138px; right:auto; top:371px; bottom:auto; height:44px; width:210px;}
+#btnFeatures {position:absolute; left:38px; right:auto; top:425px; bottom:auto; height:30px; width:80px;}
+#btnSave {position:absolute; left:138px; right:auto; top:425px; bottom:auto; height:30px; width:110px;}
+#btnItemPhoto {position:absolute; left:268px; right:auto; top:425px; bottom:auto; height:30px; width:80px;}
+#txtItemKey_wrapper {position:absolute; left:7px; right:auto; top:372px; bottom:auto; height:auto; width:120px;}
+#txtItemKey_wrapper {margin:0px; box-sizing:border-box; display:none;background-color: transparent; background-image: none;}
+#txtMode_wrapper {position:absolute; left:7px; right:auto; top:326px; bottom:auto; height:auto; width:120px;}
+#txtMode_wrapper {margin:0px; box-sizing:border-box; display:none;}
+#ftrNavBar {position:absolute; top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
+#frmSubmit {background:inherit;}
+#txtSendRequested_wrapper {position:absolute; left:109px; right:auto; top:29px; bottom:auto; height:auto; width:120px;}
+#txtSendRequested_wrapper {margin:0px; box-sizing:border-box; }
+#btnSend {position:absolute; left:133px; right:auto; top:75px; bottom:auto; height:auto; width:100px;}
+#htmlSendMsg_scroller {position:absolute; overflow:hidden; width:300px; height:150px; left:38px; top:200px;}
+#htmlSendMsg {position:absolute; left:0px; top:0px; height:150px; width:100%;}
+#htmlLoginMsg_scroller {position:absolute; overflow:hidden; width:200px; height:100px; left:69px; top:350px;}
+#htmlLoginMsg {position:absolute; left:0px; top:0px; height:100px; width:100%;}
+#btnGoogleOAUTH {position:absolute; left:133px; right:auto; top:400px; bottom:auto; height:auto; width:100px;}
+#ftrNavBarSubmit {position:absolute; top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
+#frmBrowse {background:inherit;}
+#txtItemKeyToDelete_wrapper {position:absolute; left:70px; right:auto; top:6px; bottom:auto; height:auto; width:120px;}
+#txtItemKeyToDelete_wrapper {margin:0px; box-sizing:border-box; display:none;}
+#htmlBrowseMsg_scroller {position:absolute; overflow:hidden; width:300px; height:100px; left:10px; top:0px;}
+#htmlBrowseMsg {position:absolute; left:0px; top:0px; height:100px; width:100%;}
+#htmlBrowseCustProj_scroller {position:absolute; overflow:hidden; width:151px; height:100px; left:162px; top:2px;}
+#htmlBrowseCustProj {position:absolute; left:0px; top:0px; height:100px; width:100%;}
+#grdList_scroller {position:absolute; overflow:hidden;  width:90%; height:80%; left:9px; top:39px; right:auto; bottom:auto;}
+#grdList {position:absolute; left:0px; top:0px; width:100%; height:auto }
+#ftrNavBarBrowse {position:absolute; top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
+#frmFeatures {background:inherit;}
+#lblProcessor {position:absolute; left:10px; right:auto; top:20px; bottom:auto; height:auto; width:70px;}
+#lblProcessorType {position:absolute; left:22px; right:auto; top:50px; bottom:auto; height:auto; width:100px;}
+#txtProcessorType_wrapper {position:absolute; left:5px; right:auto; top:70px; bottom:auto; height:30px; width:140px;}
+#txtProcessorType_wrapper {margin:0px; box-sizing:border-box; }
+#lblProcessorQty {position:absolute; left:152px; right:auto; top:50px; bottom:auto; height:auto; width:50px;}
+#txtProcessorQty_wrapper {position:absolute; left:150px; right:auto; top:70px; bottom:auto; height:30px; width:52px;}
+#txtProcessorQty_wrapper {margin:0px; box-sizing:border-box; }
+#lblProcessorPartNo {position:absolute; left:233px; right:auto; top:50px; bottom:auto; height:auto; width:70px;}
+#txtProcessorPartNo_wrapper {position:absolute; left:209px; right:auto; top:70px; bottom:auto; height:30px; width:140px;}
+#txtProcessorPartNo_wrapper {margin:0px; box-sizing:border-box; }
+#linProcessor {position:absolute; margin:0px; left:5px; right:auto; top:110px; bottom:auto; height:2px; width:345px;}
+#lblMemory {position:absolute; left:10px; right:auto; top:123px; bottom:auto; height:auto; width:70px;}
+#lblMemoryType {position:absolute; left:18px; right:auto; top:148px; bottom:auto; height:auto; width:120px;}
+#txtMemoryType_wrapper {position:absolute; left:5px; right:auto; top:168px; bottom:auto; height:30px; width:140px;}
+#txtMemoryType_wrapper {margin:0px; box-sizing:border-box; }
+#lblMemoryQty {position:absolute; left:152px; right:auto; top:148px; bottom:auto; height:auto; width:50px;}
+#txtMemoryQty_wrapper {position:absolute; left:152px; right:auto; top:168px; bottom:auto; height:30px; width:49px;}
+#txtMemoryQty_wrapper {margin:0px; box-sizing:border-box; }
+#lblMemoryPartNo {position:absolute; left:233px; right:auto; top:148px; bottom:auto; height:auto; width:70px;}
+#txtMemoryPartNo_wrapper {position:absolute; left:209px; right:auto; top:168px; bottom:auto; height:30px; width:140px;}
+#txtMemoryPartNo_wrapper {margin:0px; box-sizing:border-box; }
+#linMemory {position:absolute; margin:0px; left:5px; right:auto; top:208px; bottom:auto; height:2px; width:345px;}
+#lblStorage {position:absolute; left:10px; right:auto; top:221px; bottom:auto; height:auto; width:70px;}
+#lblStorageType {position:absolute; left:17px; right:auto; top:246px; bottom:auto; height:auto; width:100px;}
+#txtStorageType_wrapper {position:absolute; left:5px; right:auto; top:266px; bottom:auto; height:30px; width:140px;}
+#txtStorageType_wrapper {margin:0px; box-sizing:border-box; }
+#lblStorageQty {position:absolute; left:152px; right:auto; top:246px; bottom:auto; height:auto; width:50px;}
+#txtStorageQty_wrapper {position:absolute; left:153px; right:auto; top:266px; bottom:auto; height:30px; width:49px;}
+#txtStorageQty_wrapper {margin:0px; box-sizing:border-box; }
+#lblStoragePartNo {position:absolute; left:233px; right:auto; top:246px; bottom:auto; height:auto; width:70px;}
+#txtStoragePartNo_wrapper {position:absolute; left:209px; right:auto; top:266px; bottom:auto; height:30px; width:140px;}
+#txtStoragePartNo_wrapper {margin:0px; box-sizing:border-box; }
+#linStorage {position:absolute; margin:0px; left:5px; right:auto; top:306px; bottom:auto; height:2px; width:345px;}
+#lblFeature {position:absolute; left:10px; right:auto; top:319px; bottom:auto; height:auto; width:130px;}
+#lblFeatureType {position:absolute; left:18px; right:auto; top:349px; bottom:auto; height:auto; width:100px;}
+#txtFeatureType_wrapper {position:absolute; left:5px; right:auto; top:369px; bottom:auto; height:30px; width:140px;}
+#txtFeatureType_wrapper {margin:0px; box-sizing:border-box; }
+#lblFeatureQty {position:absolute; left:152px; right:auto; top:349px; bottom:auto; height:auto; width:50px;}
+#txtFeatureQty_wrapper {position:absolute; left:152px; right:auto; top:369px; bottom:auto; height:30px; width:49px;}
+#txtFeatureQty_wrapper {margin:0px; box-sizing:border-box; }
+#lblFeaturePartNo {position:absolute; left:233px; right:auto; top:349px; bottom:auto; height:auto; width:70px;}
+#txtFeaturePartNo_wrapper {position:absolute; left:209px; right:auto; top:369px; bottom:auto; height:30px; width:140px;}
+#txtFeaturePartNo_wrapper {margin:0px; box-sizing:border-box; }
+#btnReturn {position:absolute; left:122px; right:auto; top:413px; bottom:auto; height:30px; width:100px;}
+#frmDefaults {background:inherit;}
+#htmlDefaultsMsg_scroller {position:absolute; overflow:hidden; width:200px; height:100px; left:86px; top:19px;}
+#htmlDefaultsMsg {position:absolute; left:0px; top:0px; height:100px; width:100%;}
+#Label1 {position:absolute; left:16px; right:auto; top:75px; bottom:auto; height:auto; width:99px;}
+#txtDefaultCustomer_wrapper {position:absolute; left:124px; right:auto; top:66px; bottom:auto; height:auto; width:144px;}
+#txtDefaultCustomer_wrapper {margin:0px; box-sizing:border-box; }
+#Label2 {position:absolute; left:17px; right:auto; top:156px; bottom:auto; height:auto; width:95px;}
+#txtDefaultProject_wrapper {position:absolute; left:124px; right:auto; top:148px; bottom:auto; height:auto; width:140px;}
+#txtDefaultProject_wrapper {margin:0px; box-sizing:border-box; }
+#btnSaveDefaults {position:absolute; left:125px; right:auto; top:385px; bottom:auto; height:auto; width:100px;}
+#ftrNavBarDefaults {position:absolute; top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
+#flpRotatePhoto {position:absolute; left:21px; right:auto; top:205px; bottom:auto; height:auto; width:auto;}
+#lblRotatePhoto {position:absolute; left:124px; right:auto; top:203px; bottom:auto; height:auto; width:184px;}
+#flpPhotoUpload {position:absolute; left:21px; right:auto; top:295px; bottom:auto; height:auto; width:auto;}
+#lblPhotoUpload {position:absolute; left:124px; right:auto; top:286px; bottom:auto; height:auto; width:184px;}
+#lblRotatePhotoDegrees {position:absolute; left:38px; right:auto; top:243px; bottom:auto; height:auto; width:77px;}
+#txtRotatePhotoDegrees_wrapper {position:absolute; left:125px; right:auto; top:243px; bottom:auto; height:auto; width:60px;}
+#txtRotatePhotoDegrees_wrapper {margin:0px; box-sizing:border-box; }
+#lblRotatePhotoDegrees2 {position:absolute; left:199px; right:auto; top:249px; bottom:auto; height:auto; width:70px;}
+#frmUtil {background:inherit;}
+#Label3 {position:absolute; left:66px; right:auto; top:61px; bottom:auto; height:133px; width:249px;}
+#btnMarkUnsent {position:absolute; left:90px; right:auto; top:229px; bottom:auto; height:auto; width:200px;}
+#btnLoadDB {position:absolute; left:90px; right:auto; top:329px; bottom:auto; height:auto; width:200px;}
+#btnClearDB {position:absolute; left:90px; right:auto; top:429px; bottom:auto; height:auto; width:200px;}
+#btnReturnToEntry {position:absolute; left:90px; right:auto; top:529px; bottom:auto; height:auto; width:200px;}
+#frmItemPhoto {background:inherit;}
+#inputPhoto {position:absolute; left:35px; right:auto; top:577px; bottom:auto; height:62px; width:308px;}
+
+#btnPhoto {position:absolute; left:129px; right:auto; top:25px; bottom:auto; height:30px; width:100px;}
+#btnPhotoDelete {position:absolute; left:254px; right:auto; top:25px; bottom:auto; height:30px; width:100px;}
+#PreviewPic_wrapper {position:absolute; left:0px; right:auto; top:70px; bottom:auto; height:350px; width:375px;}
+
+#htmlItemPhotoMsg_scroller {position:absolute; overflow:hidden; width:349px; height:40px; left:11px; top:425px;}
+#htmlItemPhotoMsg {position:absolute; left:0px; top:0px; height:40px; width:100%;}
+#btnPhotoReturn {position:absolute; left:129px; right:auto; top:452px; bottom:auto; height:30px; width:100px;}
+</style>
+<style>
+/* span {font: arial, sans-serif !important; font-size: xx-small !important; font-style: normal;} */
+
+.select {
+    font-size: xx-small; !important;
+}
+
+option
+    {
+    font-weight: normal; !important;
+    font-size: 10px; !important; 
+    }
+    
+div.AvailDisabled
+    {
+     background-color: red; !important;
+    }
+
+textarea.AvailDisabled
+    {
+     background-color: red; !important;
+    }
+</style>
+</head>
+<body style="margin:0px;-ms-touch-action:none;font-family:helvetica;">
+<script>window.addEventListener('load', function() {new FastClick.attach(document.body)}, false)</script>
+<div data-role="page" id="NSBPage" data-theme="a" style="position:absolute; width:100%; background-color:inherit; ">
+<a name='/frmEnter' data-role=none></a>
+<div id="frmEnter" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmEnter.innerHTML=[  "<div id='htmlMode_scroller' class=''   style=' font-family:inherit;   font-size: 12px; color: maroon;' name=''><div id='htmlMode' style='overflow:auto; height:auto; width:164px;;'><p>...</p></div></div>",
+  "<div id='htmlMsg_scroller' class=''   style=' font-family:inherit;   color: maroon; font-size: 12px;' name=''><div id='htmlMsg' style='overflow:auto; height:auto; width:125px;;'><p>...</p></div></div>",
+  "<div id='lblCategory' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Category</div>",
+  NSB.Select_jqm('selCategory', 'Server,Network Device (Switch/Router/Telecom),Storage (Array of Drives),Desktop Computer,Laptop Computer,Mobile Device (Phone/Tablet),Power,LCD (Serialized),LCD (Bulk),Printer,E-Waste Container\u000A,Other', 'Server,Network Device (Switch/Router/Telecom),Storage (Array of Drives),Desktop Computer,Laptop Computer,Mobile Device (Phone/Tablet),Power,LCD (Serialized),LCD (Bulk),Printer,E-Waste Container,Other', 0, 12, '', 'font-size: xx-small;','', 'carat-d', 'right', 'false', 'true', 'a', 'a', 'data-mini=true', '', '','', '', 'false'),
+  "<div id='lblAssetTagNumber' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Asset Tag Number</div>",
+  "<input id='txtAssetTagNumber' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  Txt'>",
+  "<div id='lblSerialNumber' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Serial Number</div>",
+  "<input id='txtSerialNumber' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  Txt'>",
+  "<div id='lblDriveSerials' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Drive Serial Number(s)</div>",
+  "<textarea id='txtaDriveSerials' class=' ui-mini  ' data-corners=false name='' style='display:block; margin-top:0px; text-align:left; font-family:inherit; overflow-scrolling:touch; max-height:auto; text-shadow:none; '  autocorrect='on'  autocomplete='on' autocapitalize='on' data-autogrow=false  placeholder=''></textarea>",
+  "<div id='lblMake' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Make</div>",
+  "<input id='txtMake' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblModel' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Model</div>",
+  "<input id='txtModel' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  Txt'>",
+  "<div id='lblMonitorSize' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Monitor Size (in.)</div>",
+  "<input id='txtMonitorSize' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblItemQty' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Item Qty</div>",
+  "<input id='txtItemQty' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='1' max='10000' step=any value='1' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-align:right; text-shadow:none;' class=' ui-mini  Txt'>",
+  "<div id='lblCondition' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Condition Notes</div>",
+  "<textarea id='txtaCondition' class=' ui-mini  ' data-corners=false name='' style='display:block; margin-top:0px; text-align:left; font-family:inherit; overflow-scrolling:touch; max-height:auto; text-shadow:none; '  autocorrect='on'  autocomplete='on' autocapitalize='on' data-autogrow=false  placeholder=''></textarea>",
+  "<button id='btnFeatures' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; font-family:inherit;  ' data-nsb-type=Button_jqm>Features...</button>",
+  "<button id='btnSave' class='ui-btn ui-mini  ui-btn-inline ui-icon-false ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Save</button>",
+  "<button id='btnItemPhoto' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; font-family:inherit;  ' data-nsb-type=Button_jqm>Photo...</button>",
+  "<input id='txtItemKey' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm'  readonly style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<input id='txtMode' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='Add' placeholder='' data-nsb-type='TextBox_jqm'  readonly style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  NSB.FooterBar_jqm14('ftrNavBar', 'Browse,Submit,Setup', '', '', 'none', '0', ' ', 'position: fixed;'),
+  ].join('');
+</script>
+</div>
+<a name='/frmSubmit' data-role=none></a>
+<div id="frmSubmit" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmSubmit.innerHTML=[  "<input id='txtSendRequested' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='N' placeholder='' data-nsb-type='TextBox_jqm'   style='text-shadow:none;' class=' ui-mini  '>",
+  "<button id='btnSend' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; font-family:inherit;  ' data-nsb-type=Button_jqm>Send</button>",
+  "<div id='htmlSendMsg_scroller' class=''   style=' font-family:inherit;   color: maroon; font-size: 12px;' name=''><div id='htmlSendMsg' style='overflow:auto; height:auto; width:300px;;'><b>&nbsp</b></div></div>",
+  "<div id='htmlLoginMsg_scroller' class=''   style='   color: maroon; font-size: 12px;' name=''><div id='htmlLoginMsg' style='overflow:auto; height:auto; width:200px;;'><b>&nbsp</b></div></div>",
+  "<button id='btnGoogleOAUTH' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Google Login</button>",
+  NSB.FooterBar_jqm14('ftrNavBarSubmit', 'Enter,Browse,Setup', '', '', 'none', '0', ' ', ''),
+  ].join('');
+</script>
+</div>
+<a name='/frmBrowse' data-role=none></a>
+<div id="frmBrowse" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmBrowse.innerHTML=[  "<input id='txtItemKeyToDelete' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm'  readonly style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='htmlBrowseMsg_scroller' class=''   style=' font-family:inherit;   color: maroon; font-size: 12px;' name=''><div id='htmlBrowseMsg' style='overflow:auto; height:auto; width:300px;;'><p>&nbsp</p></div></div>",
+  "<div id='htmlBrowseCustProj_scroller' class=''   style=' font-family:inherit;   color: maroon; font-size: 12px;' name=''><div id='htmlBrowseCustProj' style='overflow:auto; height:auto; width:151px;;'><p>&nbsp</p></div></div>",
+  NSB.Grid("grdList", "1", "28", "", "", "Action, Item Key,Category,Asset Tag Number,Serial Number,Drive Serial Numbers,Make,Model,Monitor Size,Quantity,Condition Notes,Processor Type,Processor Qty,Processor Part Number,Memory Type,Memory Qty,Memory Part Number,Storage Type,Storage Qty,Storage Part Number,Feature Type,Feature Qty,Feature Part Number,Customer,Project,Collected Date,Location Lat,Location Long", "", "style=", "height: 30px; font-size: 10px; white-space:nowrap;padding: 5px;", ""),
+  NSB.FooterBar_jqm14('ftrNavBarBrowse', 'Enter,Submit,Setup', '', '', 'none', '0', ' ', 'position: fixed;'),
+  ].join('');
+</script>
+</div>
+<a name='/frmFeatures' data-role=none></a>
+<div id="frmFeatures" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmFeatures.innerHTML=[  "<div id='lblProcessor' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:bold; background-color:transparent;  color: maroon;' >Processor:</div>",
+  "<div id='lblProcessorType' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Model/Speed</div>",
+  "<input id='txtProcessorType' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblProcessorQty' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Quantity</div>",
+  "<input id='txtProcessorQty' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='1' step=any value='1' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-align:right; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblProcessorPartNo' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Part Number</div>",
+  "<input id='txtProcessorPartNo' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<hr id='linProcessor' class='' style='background-color:gray;  ' >",
+  "<div id='lblMemory' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:bold; background-color:transparent;  color: maroon;' >Memory:</div>",
+  "<div id='lblMemoryType' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Memory Type/Size</div>",
+  "<input id='txtMemoryType' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblMemoryQty' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Quantity</div>",
+  "<input id='txtMemoryQty' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='1' step=any value='1' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-align:right; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblMemoryPartNo' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Part Number</div>",
+  "<input id='txtMemoryPartNo' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<hr id='linMemory' class='' style='background-color:gray;  ' >",
+  "<div id='lblStorage' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:bold; background-color:transparent;  color: maroon;' >Storage:</div>",
+  "<div id='lblStorageType' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Drive Type/Size</div>",
+  "<input id='txtStorageType' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblStorageQty' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Quantity</div>",
+  "<input id='txtStorageQty' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='1' step=any value='1' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-align:right; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblStoragePartNo' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Part Number</div>",
+  "<input id='txtStoragePartNo' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<hr id='linStorage' class='' style='background-color:gray;  ' >",
+  "<div id='lblFeature' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:bold; background-color:transparent;  color: maroon;' >Other Feature:</div>",
+  "<div id='lblFeatureType' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Feature Type</div>",
+  "<input id='txtFeatureType' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblFeatureQty' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Quantity</div>",
+  "<input id='txtFeatureQty' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='1' step=any value='1' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-align:right; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblFeaturePartNo' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; font-weight:100; background-color:transparent;  ' >Part Number</div>",
+  "<input id='txtFeaturePartNo' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm' data-clear-btn='true'  style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<button id='btnReturn' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; font-family:inherit;  ' data-nsb-type=Button_jqm>Return</button>",
+  ].join('');
+</script>
+</div>
+<a name='/frmDefaults' data-role=none></a>
+<div id="frmDefaults" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmDefaults.innerHTML=[  "<div id='htmlDefaultsMsg_scroller' class=''   style=' font-family:inherit;   color: maroon; font-size: 12px;' name=''><div id='htmlDefaultsMsg' style='overflow:auto; height:auto; width:200px;;'><b>&nbsp&nbsp</b></div></div>",
+  "<div id='Label1' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Customer Default</div>",
+  "<input id='txtDefaultCustomer' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<div id='Label2' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Project Default</div>",
+  "<input id='txtDefaultProject' type='text' name='' autocorrect='on' autocomplete='on' autocapitalize='on' step=any value='' placeholder='' data-nsb-type='TextBox_jqm'   style='font-family:inherit; text-shadow:none;' class=' ui-mini  '>",
+  "<button id='btnSaveDefaults' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; font-family:inherit;  ' data-nsb-type=Button_jqm>Save</button>",
+  NSB.FooterBar_jqm14('ftrNavBarDefaults', 'Enter,Browse,Submit', '', '', 'none', '0', ' ', ''),
+  "<div id='flpRotatePhoto' style=''><select id='flpRotatePhoto_inner'  data-role=flipswitch data-mini=true data-corners='false' style='' class=' '><option>Off</option><option>On</option></select></div>",
+  "<div id='lblRotatePhoto' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; background-color:transparent;  ' >Rotate photos (necessary on some devices)</div>",
+  "<div id='flpPhotoUpload' style=''><select id='flpPhotoUpload_inner'  data-role=flipswitch data-mini=true data-corners='false' style='' class=' '><option>Off</option><option>On</option></select></div>",
+  "<div id='lblPhotoUpload' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; background-color:transparent;  ' >Upload item photos (may be necessary to turn off this feature on a slow connection or if Google login is not working)</div>",
+  "<div id='lblRotatePhotoDegrees' class='' data-nsb-type=Label style='text-align:right; text-shadow:none; font-size:12px; font-family:inherit; background-color:transparent;  ' >Degrees of Rotation</div>",
+  "<input id='txtRotatePhotoDegrees' type='number' name='' autocorrect='on' autocomplete='on' autocapitalize='on' min='-360' max='360' step=any value='' placeholder='' data-nsb-type='TextBox_jqm'   style='text-shadow:none;' class=' ui-mini  '>",
+  "<div id='lblRotatePhotoDegrees2' class='' data-nsb-type=Label style=' text-shadow:none; font-size:12px; background-color:transparent;  ' >(e.g. 90&deg)</div>",
+  ].join('');
+</script>
+</div>
+<a name='/frmUtil' data-role=none></a>
+<div id="frmUtil" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmUtil.innerHTML=[  "<div id='Label3' class='' data-nsb-type=Label style=' text-shadow:none; font-size:16px; font-weight:bold; background-color:transparent;  ' >Notice:  All the utility functions below immediately update the application database.  Use with care.</div>",
+  "<button id='btnMarkUnsent' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Set All Rows To Unsent</button>",
+  "<button id='btnLoadDB' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Load Test Data To DB</button>",
+  "<button id='btnClearDB' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Delete All Rows From DB</button>",
+  "<button id='btnReturnToEntry' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Go To Item Entry</button>",
+  ].join('');
+</script>
+</div>
+<a name='/frmItemPhoto' data-role=none></a>
+<div id="frmItemPhoto" class="nsb-form" style="position:absolute; display:none; height:100vh; top:0px; left:0px; width:100%; ">
+<script>
+frmItemPhoto.innerHTML=[  "<div id='inputPhoto' class=''  style='border-width:1px; border-style:solid; border-color:#E0E0E0; display:none;' >",,"<input type=\"file\" id=\"itemPhoto\" accept=\"image/*;capture=camera\"; onChange=\"getPicURI(event)\"/>","</div>",
+  "<button id='btnPhoto' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Take Photo</button>",
+  "<button id='btnPhotoDelete' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible; display:none; ' data-nsb-type=Button_jqm>Delete Photo</button>",
+  "<div id='PreviewPic_wrapper' class=''  style='' >",,"&nbsp","</div>",
+  "<div id='htmlItemPhotoMsg_scroller' class=''   style='   color: maroon; font-size: 12px;' name=''><div id='htmlItemPhotoMsg' style='overflow:auto; height:auto; width:349px;;'><span>&nbsp</span></div></div>",
+  "<button id='btnPhotoReturn' class='ui-btn ui-mini  ui-btn-inline ui-icon- ui-btn-icon-none  ' style='margin:0px; text-shadow:none; overflow:visible;  ' data-nsb-type=Button_jqm>Return</button>",
+  ].join('');
+</script>
+</div>
+</div>
+<script>
+if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');
+(function(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];})()
+NSB.currentForm = frmEnter;
+NSB.stopOnError = True;
+NSB.enableBrowserArrows = true;
+NSB.enableAppScroll = true;
+NSB.id = 'StudentsSQLite';
+if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;
+
+// ***** Code for form: frmEnter *****
+window.addEventListener('load', function() {
+  frmEnter.style.display = 'block';
+  NSB.addProperties(frmEnter);
+
+  NSB.addProperties(htmlMode,htmlMode_scroller);
+
+  NSB.addProperties(htmlMsg,htmlMsg_scroller);
+
+  NSB.addProperties(lblCategory);
+  NSB.Select_jqm_init(selCategory,'font-size: xx-small;','', '', 'carat-d');
+
+  NSB.addProperties(lblAssetTagNumber);
+  txtAssetTagNumber.parentElement.id = 'txtAssetTagNumber_wrapper';
+  txtAssetTagNumber_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtAssetTagNumber.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtAssetTagNumber, txtAssetTagNumber_wrapper);
+  $('#txtAssetTagNumber_wrapper').removeClass('ui-shadow-inset');
+  $('#txtAssetTagNumber_wrapper').removeClass('ui-corner-all');
+  txtAssetTagNumber.style.height = (txtAssetTagNumber.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtAssetTagNumber);
+
+  NSB.addProperties(lblSerialNumber);
+  txtSerialNumber.parentElement.id = 'txtSerialNumber_wrapper';
+  txtSerialNumber_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtSerialNumber.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtSerialNumber, txtSerialNumber_wrapper);
+  $('#txtSerialNumber_wrapper').removeClass('ui-shadow-inset');
+  $('#txtSerialNumber_wrapper').removeClass('ui-corner-all');
+  txtSerialNumber.style.height = (txtSerialNumber.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtSerialNumber);
+
+  NSB.addProperties(lblDriveSerials);
+  txtaDriveSerials.ontouchmove=function(e){e.stopPropagation()};
+  NSB.addProperties(txtaDriveSerials);
+  $('#txtaDriveSerials').removeClass('ui-shadow-inset');
+
+  NSB.addProperties(lblMake);
+  txtMake.parentElement.id = 'txtMake_wrapper';
+  txtMake_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMake.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMake, txtMake_wrapper);
+  $('#txtMake_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMake_wrapper').removeClass('ui-corner-all');
+  txtMake.style.height = (txtMake.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMake);
+
+  NSB.addProperties(lblModel);
+  txtModel.parentElement.id = 'txtModel_wrapper';
+  txtModel_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtModel.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtModel, txtModel_wrapper);
+  $('#txtModel_wrapper').removeClass('ui-shadow-inset');
+  $('#txtModel_wrapper').removeClass('ui-corner-all');
+  txtModel.style.height = (txtModel.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtModel);
+
+  NSB.addProperties(lblMonitorSize);
+  txtMonitorSize.parentElement.id = 'txtMonitorSize_wrapper';
+  txtMonitorSize_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMonitorSize.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMonitorSize, txtMonitorSize_wrapper);
+  $('#txtMonitorSize_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMonitorSize_wrapper').removeClass('ui-corner-all');
+  txtMonitorSize.style.height = (txtMonitorSize.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMonitorSize);
+
+  NSB.addProperties(lblItemQty);
+  txtItemQty.parentElement.id = 'txtItemQty_wrapper';
+  txtItemQty_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtItemQty.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtItemQty, txtItemQty_wrapper);
+  $('#txtItemQty_wrapper').removeClass('ui-shadow-inset');
+  $('#txtItemQty_wrapper').removeClass('ui-corner-all');
+  txtItemQty.style.height = (txtItemQty.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtItemQty);
+
+  NSB.addProperties(lblCondition);
+  txtaCondition.ontouchmove=function(e){e.stopPropagation()};
+  NSB.addProperties(txtaCondition);
+  $('#txtaCondition').removeClass('ui-shadow-inset');
+  NSB.addDisableProperty(btnFeatures);
+  NSB.addProperties(btnFeatures);
+  NSB.addDisableProperty(btnSave);
+  NSB.addProperties(btnSave);
+  NSB.addDisableProperty(btnItemPhoto);
+  NSB.addProperties(btnItemPhoto);
+  txtItemKey.parentElement.id = 'txtItemKey_wrapper';
+  txtItemKey_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtItemKey.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtItemKey, txtItemKey_wrapper);
+  $('#txtItemKey_wrapper').removeClass('ui-shadow-inset');
+  $('#txtItemKey_wrapper').removeClass('ui-corner-all');
+  txtItemKey.style.height = (txtItemKey.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtItemKey);
+  txtMode.parentElement.id = 'txtMode_wrapper';
+  txtMode_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMode.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMode, txtMode_wrapper);
+  $('#txtMode_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMode_wrapper').removeClass('ui-corner-all');
+  txtMode.style.height = (txtMode.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMode);
+  ftrNavBar.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,ftrNavBar)};
+  NSB.FooterBar_jqm_init('ftrNavBar','Browse,Submit,Setup');
+  NSB.addProperties(ftrNavBar);
+  (function(){var d,i,s='frmBrowse,frmSubmit,frmDefaults'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('ftrNavBar_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
+  frmEnter.style.display = 'none';
+}, false);
+frmEnter.onshow=function(){
+    currForm = "frmEnter";
+    innerDocNav = false;
+    var textbox = document.getElementById("selCategory_inner"); // setFocus on selCategory does not work
+    textbox.focus();
+    textbox.scrollIntoView();
+
+    console.log("In frmEnter.onshow");
+// disable active button highlighting
+    $("#ftrNavBar_0").removeClass("ui-btn-active");
+    $("#ftrNavBar_1").removeClass("ui-btn-active");
+    $("#ftrNavBar_2").removeClass("ui-btn-active");
+
+    initialize_frmEnter();  // prepare form for add or update mode
+}
+
+function Main() {
+    getLocation();  // run first time
+    setInterval(function(){getLocation()},360000); // retrieve location every 6 minutes after first run
+
+// setup autocomplete suggestions on txtMake
+    document.getElementById("txtMake").setAttribute("list","Make-DL");
+    var datalist = document.createElement("DATALIST");
+    datalist.setAttribute("id", "Make-DL")
+    document.body.appendChild(datalist);
+  
+    var makes = populateMakes();
+    var datalist = document.getElementById('Make-DL');
+
+    document.getElementById('txtMake').addEventListener('keyup', function () {
+        if (this.value.length === 0) {
+            return;
+        }    
+
+        // Scan for matches in make array of valid values and populate suggest list
+        datalist.textContent = '';
+        for (var i = 0; i < makes.length; i++) {
+            make = makes[i].toLowerCase()
+            if (make.indexOf(this.value.toLowerCase()) !== 0) {
+                continue;
+            }
+    
+            var option = document.createElement('option');
+            option.value = makes[i];
+            datalist.appendChild(option);
+        } // end for
+    }); // end addEventListener
+
+// Clear suggestion list if txtMake loses focus
+    document.getElementById('txtMake').addEventListener('blur', function () {
+        var datalist = document.getElementById('Make-DL');
+        datalist.textContent = '';
+    });    
+
+//$('*').filter(function() {
+//    return $(this).css('z-index') == 99999;
+//}).each(function() {
+//    $(this).hide();
+//    return false; // break out of loop
+//});
+
+// auto advance to Serial Number field based on Enter keycode sent by scanner (or by user hitting enter on web page)
+/*  
+$('#txtAssetTagNumber').keydown(function (e){
+   if(e.keyCode == 13){
+     txtSerialNumber.focus();
+   }
+});
+
+// auto advance to Model field based on Enter keycode sent by scanner (or by user hitting enter on web page)
+$('#txtSerialNumber').keydown(function (e){
+   if(e.keyCode == 13){
+//     $('#selMake_inner').focus();
+     txtaDriveSerials.focus();
+   }
+});
+*/
+
+// var origStyleContent = $('#logo-example').attr('style');
+// $('#logo-example').attr('style',origStyleContent+';width:150px !important');  
+   
+}; // end Main()
+
+function successDB() {
+  console.log("in sucessDB for " + sqlOperation)
+};
+
+function failDB(tx, err) {
+    console.log("failDB err");
+    console.log(err);
+    NSB.MsgBox("DB operation failed: " + sqlOperation + " Error: " + err.code + 
+               " " + err.message);
+//  alert("DB operation failed: " + sqlOperation + " Error: " + err.errcode);
+
+};
+
+btnSave.onclick=function(){
+
+    setMsg("Saving...");
+    btnSave.disabled = true;
+
+    if (txtMode.value == "Add") {
+// passing in geolocation coordinates retrieved periodically by setInterval(getLocation(), xxx)
+        insertRow(geoCoords);
+    } else {  // update instead of insert
+        updateRow();
+    }
+};
+
+function insertRow (coordinates) {
+    
+    var Category = selCategory.selectedValue();
+    var AssetTagNumber = txtAssetTagNumber.value ;
+    var SerialNumber = txtSerialNumber.value;
+    var DriveSerialNumbers = txtaDriveSerials.value;
+
+//    var Make = selMake.selectedValue();
+    var Make = txtMake.value;
+    var Model = txtModel.value;
+    var MonitorSize = txtMonitorSize.value;
+    var ItemQty = txtItemQty.valueAsNumber;
+//    var Customer = txtCustomer.value;
+//    var Project = txtProject.value;
+    var Customer = "";
+    var Project = "";
+    
+    if (localStorage.getItem("DefaultCustomer")) {
+        Customer = localStorage.getItem("DefaultCustomer");
+    }
+    if (localStorage.getItem("DefaultProject")) { 
+        Project = localStorage.getItem("DefaultProject");
+    }
+// Initialize feature quanities to zero and then override with form values
+// if user enters feature type and/or part number
+    var ProcessorQty = 0;
+    var MemoryQty = 0;
+    var StorageQty = 0;
+    var OtherFeatureQty = 0;
+    var UserEmail = "";
+    var CollectedDate = new Date(); 
+    var LocationLat = coordinates[0];
+    var LocationLong = coordinates[1];
+
+    var ProcessorType = txtProcessorType.value;
+    var ProcessorPartNumber = txtProcessorPartNo.value;
+    if ((ProcessorType) || (ProcessorPartNumber)) {
+        ProcessorQty = txtProcessorQty.valueAsNumber;
+    }
+    var MemoryType = txtMemoryType.value;
+    var MemoryPartNumber = txtMemoryPartNo.value;
+    if ((MemoryType) || (MemoryPartNumber)) {
+        MemoryQty = txtMemoryQty.valueAsNumber;
+    }
+    var StorageType = txtStorageType.value;
+    var StoragePartNumber = txtStoragePartNo.value;
+    if ((StorageType) || (StoragePartNumber)) {
+        StorageQty = txtStorageQty.valueAsNumber;
+    }
+    var OtherFeatureType = txtFeatureType.value;
+    var OtherFeaturePartNumber = txtFeaturePartNo.value;
+    if ((OtherFeatureType) || (OtherFeaturePartNumber)) {
+        OtherFeatureQty = txtFeatureQty.valueAsNumber;
+    }
+
+    var ConditionNotes = txtaCondition.value;
+    var UserEmail = "";
+    var CollectedDate = new Date(); 
+    var PhotoURL = "";
+    var Sent = "N";
+    var sqlList = [];
+    var args = [Category, AssetTagNumber, SerialNumber, Make, Model, ItemQty, Customer, Project, UserEmail, CollectedDate, LocationLat, LocationLong, ProcessorType, ProcessorQty, ProcessorPartNumber, MemoryType, MemoryQty, MemoryPartNumber, StorageType, StorageQty, StoragePartNumber, OtherFeatureType, OtherFeatureQty, OtherFeaturePartNumber, ConditionNotes, MonitorSize, DriveSerialNumbers, PhotoURL, Sent];
+
+    sqlOperation = "INSERT equipmentData and update picData Item Key";
+// if photo was taken, attach existing picData record(s) to item key using success callback on sql call
+    sqlList[0] = ["INSERT INTO equipmentData ([Category], [Asset Tag Number], [Serial Number], [Make], [Model], [Item Qty], [Customer], [Project], [User Email], [Collected Date], [Location Lat], [Location Long], [Processor Type], [Processor Qty], [Processor Part Number], [Memory Type], [Memory Qty], [Memory Part Number], [Storage Type], [Storage Qty], [Storage Part Number], [Other Feature Type], [Other Feature Qty] , [Other Feature Part Number], [Condition Notes], [Monitor Size], [Drive Serial Numbers], [Photo URL], [Sent]) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);", args, updatePhotoItemKey, failDB ];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+   
+    setMsg("Item saved")
+//  htmlMsg.innerHTML="<span>Row saved</span>";
+//  htmlMsg.innerHTML += "<span>Length: " + htmlMsg.innerHTML.length + "</span>";
+//  htmlMsg.refresh();
+    setTimeout(clearMsg,1000);
+    btnSave.disabled = false;
+
+};
+
+function updateRow () {
+  console.log("In updateRow");
+    var sqlList = [];
+    var ItemKey = txtItemKey.valueAsNumber;
+    var Category = selCategory.selectedValue();
+    var AssetTagNumber = txtAssetTagNumber.value;
+    var SerialNumber = txtSerialNumber.value;
+    var DriveSerialNumbers = txtaDriveSerials.value;
+//    var Make = selMake.selectedValue();
+    var Make = txtMake.value;
+    var Model = txtModel.value;
+    var MonitorSize = txtMonitorSize.value;
+    var ItemQty = txtItemQty.valueAsNumber;
+    var Customer = "";
+    var Project = "";
+//    var Customer = txtCustomer.value;
+//    var Project = txtProject.value;
+
+    if (localStorage.getItem("DefaultCustomer")) {
+        Customer = localStorage.getItem("DefaultCustomer");
+    }
+    if (localStorage.getItem("DefaultProject")) { 
+        Project = localStorage.getItem("DefaultProject");
+    }
+
+    var ProcessorType = txtProcessorType.value;
+    var ProcessorQty = txtProcessorQty.valueAsNumber;
+    var ProcessorPartNumber = txtProcessorPartNo.value;
+    var MemoryType = txtMemoryType.value;
+    var MemoryQty = txtMemoryQty.valueAsNumber;
+    var MemoryPartNumber = txtMemoryPartNo.value;
+    var StorageType = txtStorageType.value;
+    var StorageQty = txtStorageQty.valueAsNumber;
+    var StoragePartNumber = txtStoragePartNo.value;
+    var OtherFeatureType = txtFeatureType.value;
+    var OtherFeatureQty = txtFeatureQty.valueAsNumber;
+    var OtherFeaturePartNumber = txtFeaturePartNo.value;
+    var ConditionNotes = txtaCondition.value;
+    var UserEmail = "";
+    var CollectedDate = new Date(); 
+//    var LocationLat = coordinates[0];   // don't update original location data during Update
+//    var LocationLong = coordinates[1];  // don't update original location data during Update
+    var sqlList = [];
+    var args = [Category, AssetTagNumber, SerialNumber, Make, Model, ItemQty, Customer, Project, CollectedDate, ProcessorType, ProcessorQty, ProcessorPartNumber, MemoryType, MemoryQty, MemoryPartNumber, StorageType, StorageQty, StoragePartNumber, OtherFeatureType, OtherFeatureQty, OtherFeaturePartNumber, ConditionNotes, MonitorSize, DriveSerialNumbers, ItemKey];
+
+    sqlOperation = "UPDATE equipmentData and physically delete picData rows marked for deletion via callback";
+    sqlList[0] = ["UPDATE equipmentData SET [Category] = ?, [Asset Tag Number] = ?, [Serial Number] = ?, [Make] = ?, [Model] = ?, [Item Qty] = ?, [Customer] = ?, [Project] = ?, [Collected Date] = ?, [Processor Type] = ?, [Processor Qty] = ?, [Processor Part Number] = ?, [Memory Type] = ?, [Memory Qty] = ?, [Memory Part Number] = ?, [Storage Type] = ?, [Storage Qty] = ?, [Storage Part Number] = ?, [Other Feature Type] = ?, [Other Feature Qty] = ?, [Other Feature Part Number] = ?, [Condition Notes] = ?, [Monitor Size] = ?, [Drive Serial Numbers] = ? WHERE [Item Key] = ? ;", args, function(){updatePhotoItemKeyHandler(null, null, ItemKey);}, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+
+    deleteMarked_picData(ItemKey); // delete any picData rows for this item that were marked for deletion
+    
+    txtMode.value = "Add"; // Put frmEnter back into default "Add" mode; initialize_frmEnter() is called
+                           // via callback chain after SQL updates performed on equipmentData and picData tables.
+                           // The initialize_frmEnter function removes any picData temp (status T) rows in preparation for
+                           // next item add or update.
+    htmlBrowseMsg.innerHTML = "<span>" + "Item " + ItemKey + " updated</span>";
+    innerDocNav = true;
+    ChangeForm(frmBrowse); // trigger onload procedure for frmBrowse to reload grid control
+    grdList.disabled = false;
+// clear msg after a delay   
+    setTimeout(function() {htmlBrowseMsg.innerHTML = "<span>&nbsp</span>";},1000);  // clear delete message after 1 second
+
+    setMsg("Item " +  ItemKey + " updated");
+//  htmlMsg.innerHTML += "<span>Length: " + htmlMsg.innerHTML.length + "</span>";
+    setTimeout(clearMsg,1000);
+
+};
+  
+function setMsg (msg) {
+//    htmlMsg.innerHTML="<span style='font-weight: bold;'>" + msg + "</span>"; // set message
+    htmlMsg.innerHTML="<span>" + msg + "</span>"; // set message
+
+    htmlMsg.refresh();
+};  
+
+function clearMsg () {
+    htmlMsg.innerHTML="<span>&nbsp</span>"; // clear message
+    htmlMsg.refresh();
+};  
+
+function initialize_frmEnter () {
+    console.log("in initialize_frmEnter - mode: " + txtMode.value);
+    clearMsg(); // status indicator
+    
+// Restore the frmEnter Mode if returning from frmFeature, fromItemPhoto, or frmBrowse and then return without 
+// further initialization to leave form in same state it was in prior to subform navigation 
+// (i.e. don't clear data in case user already entered data before going to subform for Features or Photo).
+    if (txtMode.value == "FeaturesAdd" || txtMode.value == "PhotoAdd" || txtMode.value == "Browse") {
+        txtMode.value = "Add";
+        return;
+    }
+    if (txtMode.value =="FeaturesUpdate" || txtMode.value =="PhotoUpdate") {
+            txtMode.value ="Update";
+            return;
+    }    
+
+// Begin form reset for new Item Add or Update
+// If not returning from feature or photo subforms, then get form ready for next item add or update
+    btnSave.disabled = false; // Make sure save button is reactivated after update or insert
+
+// Clear picture in temp storage from previous item Add or Update
+    clearTemp_picData(); // Remove pictures that were not saved with items (i.e. abandoned items).    
+    clearPreviewPic(); // Remove picture canvas element from frmItemPhoto, if present
+    restorePicFromDeletion(); // Undo marked for deletion in the case where a user deleted a photo,
+                             // but then did not subsequently save the item
+
+    if (txtMode.value == "Add") { // clear selected form fields for add; fields not cleared are effectively ready to copy
+                             // forward onto new row (e.g. txtMake, txtModel)
+        console.log("In initializefrmEnter if condition for txtMode of Add");
+        htmlMode.innerHTML="<span>Mode: Adding new item</span>";
+        htmlMode.refresh()
+
+        txtItemKey.value = null;
+        txtAssetTagNumber.value = "";
+        txtSerialNumber.value = "";
+        txtaDriveSerials.value="";
+        txtItemQty.value = 1;
+        txtMonitorSize.value = "";
+        txtaCondition.value = "";
+        txtProcessorType.value = "";
+        txtProcessorQty.value = 1;
+        txtProcessorPartNo.value = "";
+        txtMemoryType.value = "";
+        txtMemoryQty.value = 1;
+        txtMemoryPartNo.value = "";
+        txtStorageType.value = "";
+        txtStorageQty.value = 1;
+        txtStoragePartNo.value = "";
+        txtFeatureType.value = "";
+        txtFeatureQty.value = 1;
+        txtFeaturePartNo.value = "";
+        var fa = ["txtProcessorType", "txtProcessorPartNo", "txtMemoryType", "txtMemoryPartNo", 
+                  "txtStorageType", "txtStoragePartNo", "txtFeatureType", "txtFeaturePartNo",
+                  "txtAssetTagNumber", "txtSerialNumber", "txtMonitorSize", "txtMake", "txtModel"];
+        setClearLinkOnFields(fa); // hide jquery mobile clear data link for empty fields
+
+//        txtCustomer.value = localStorage.DefaultCustomer;
+//        txtProject.value = localStorage.DefaultProject;
+    
+    } else { // update mode, get the selected item from DB and populate form fields
+        console.log("In initializefrmEnter else condition for txtMode of Update");
+        sqlOperation = "SELECT equipmentData for update";
+        var key = txtItemKey.valueAsNumber;
+        var sqlList = [];
+
+        htmlMode.innerHTML="<span>Mode: Updating item " + key + "</span>";
+        htmlMode.refresh()
+
+        var args = [key];
+        sqlList[0] = ["Select * FROM equipmentData WHERE [Item Key] = ? ;", args, load_frmEnter, failDB ];
+
+        Sql(DB, sqlList);
+    }
+
+// Set focus on category field
+    var textbox = document.getElementById("selCategory_inner"); // setFocus on selCategory does not work
+    textbox.focus();
+    textbox.scrollIntoView();
+
+}
+
+function load_frmEnter(transaction, result) {
+console.log("in loadfrmEnter");
+
+    DBrecords = result;
+    console.log("in loadfrmEnter - row count: " + DBrecords.rows.length);
+    var record;
+    record = DBrecords.rows.item(0);  // one row
+ 
+    console.log("loadfrmEnter Category: " + record["Category"]);
+    console.log("loadfrmEnter Item Key: " + record["Item Key"]);
+    txtItemKey.value = record["Item Key"];
+    // Set the Category select to the retrieved database value
+    $("#selCategory_inner-button").find("span").text(record["Category"]);
+    $("#selCategory_inner option[value='" + record["Category"] + "']").prop('selected', true);
+
+    txtAssetTagNumber.value = record["Asset Tag Number"];
+    txtSerialNumber.value = record["Serial Number"];
+    txtaDriveSerials.value = record["Drive Serial Numbers"];
+
+    txtMake.value = record["Make"];
+    txtModel.value = record["Model"];
+    txtMonitorSize.value = record["Monitor Size"];
+    txtItemQty.value = record["Item Qty"];
+    txtaCondition.value = record["Condition Notes"];
+    txtProcessorType.value = record["Processor Type"];
+    txtProcessorQty.value = record["Processor Qty"];
+    txtProcessorPartNo.value = record["Processor Part Number"];
+    txtMemoryType.value = record["Memory Type"];
+    txtMemoryQty.value = record["Memory Qty"];
+    txtMemoryPartNo.value = record["Memory Part Number"];
+    txtStorageType.value = record["Storage Type"];
+    txtStorageQty.value = record["Storage Qty"];
+    txtStoragePartNo.value = record["Storage Part Number"];
+    txtFeatureType.value = record["Other Feature Type"];
+    txtFeatureQty.value = record["Other Feature Qty"];
+    txtFeaturePartNo.value = record["Other Feature Part Number"];
+
+//          txtProject.value = record["Project"];
+//          txtCustomer.value = record["Customer"];
+//          record["User Email"]);
+//          record["Collected Date"]);
+//          record["Location Lat"]);
+//          record["Location Long"]);
+    txtMode.value = "Update";
+//    var textbox = document.getElementById("selCategory_inner"); // setFocus on selCategory does not work
+//    textbox.focus();
+//    textbox.scrollIntoView();
+      var fa = ["txtProcessorType", "txtProcessorPartNo", "txtMemoryType", "txtMemoryPartNo", 
+                  "txtStorageType", "txtStoragePartNo", "txtFeatureType", "txtFeaturePartNo",
+                  "txtAssetTagNumber", "txtSerialNumber", "txtMonitorSize", "txtMake", "txtModel"];
+        setClearLinkOnFields(fa); // hide jquery mobile clear data link for empty fields
+
+    setFormFieldsForCategory(selCategory.selectedValue());
+    getPreviewPic(txtItemKey.valueAsNumber, getPreviewPicToPage); // load previewPic, if any, on frmItemPhoto
+}  
+
+btnFeatures.onclick=function(){
+
+    if (txtMode.value == "Add") {
+        txtMode.value = "FeaturesAdd";
+    } else {
+        txtMode.value = "FeaturesUpdate";
+    }
+    innerDocNav = true;
+//  ChangeForm(frmFeatures);
+// ChangeForm(frmFeatures, "slide", "slide", 300);        
+
+    ChangeForm(window["frmFeatures"]);
+
+}
+
+btnItemPhoto.onclick=function(){
+
+    if (txtMode.value == "Add") {
+        txtMode.value = "PhotoAdd";
+    } else {
+        txtMode.value = "PhotoUpdate";
+    }
+    innerDocNav = true;
+
+    ChangeForm(window["frmItemPhoto"]);
+
+}
+
+ftrNavBar.onclick=function(){
+    txtMode.value = "Add"; // Set Add mode if user navigates away to reset form.  This is done to avoid user leaving
+                           // item up for update, going to frmSubmit and Sending data, then returning to
+                           // an in-process item update on an item that has already been sent to Google Sheets.
+    innerDocNav = true;
+}
+
+function setFormFieldsForCategory(c) {
+ 
+// initially set all elements enabled and and then disable by Category in the
+// switch statement below
+
+    btnFeatures.show();
+    lblMonitorSize.textContent = "Monitor Size (in.)";
+
+    var fields = ["txtAssetTagNumber", "txtSerialNumber", "txtaDriveSerials",
+                  "txtMake", "txtModel", "txtMonitorSize", "txtItemQty", 
+                  "txtaCondition" 
+                 ];
+    enableFields(fields);
+    if (txtMode.value == "Add") { // Only clear Make and Model on Category change in Add mode.
+        txtMake.value = "";       // The setFormFieldsForCategory fucntion is also called in Update mode where
+        txtModel.value = "";      // Make and Model should be preserved so they reflect the values read
+                                  // from database.
+        setClearLinkOnFields(["txtMake", "txtModel"]);
+    }
+
+// Currently not disabling any frmFeatures controls.  Instead, the btnFeatures on frmEnter is being hidden or 
+// displayed depending on the Category.
+//
+//          txtProcessorType.value = record["Processor Type"];
+//          txtProcessorQty.value = record["Processor Qty"];
+//          txtProcessorPartNo.value = record["Processor Part Number"];
+//          txtMemoryType.value = record["Memory Type"];
+//          txtMemoryQty.value = record["Memory Qty"];
+//          txtMemoryPartNo.value = record["Memory Part Number"];
+//          txtStorageType.value = record["Storage Type"];
+//          txtStorageQty.value = record["Storage Qty"];
+//          txtStoragePartNo.value = record["Storage Part Number"];
+//          txtFeatureType.value = record["Other Feature Type"];
+//          txtFeatureQty.value = record["Other Feature Qty"];
+//          txtFeaturePartNo.value = record["Other Feature Part Number"];
+ 
+    switch (c) {  // based on passed in Category
+      case "Server":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+          break;
+      case "Network Device (Switch/Router/Telecom)":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+      case "Storage (Array of Drives)":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+      case "Desktop Computer":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+      case "Laptop Computer":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+       case "Mobile Device (Phone/Tablet)":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+       case "Power":
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+       case "LCD (Serialized)":
+          var fields = [];
+          btnFeatures.hide();
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+       case "LCD (Bulk)":
+          var fields = ["txtAssetTagNumber","txtSerialNumber","txtaDriveSerials",
+                       "txtMake", "txtModel"];
+          btnFeatures.hide();
+          disableFields(fields);
+          txtMonitorSize.focus();
+
+          break;
+       case "Printer":
+          btnFeatures.hide();
+          var fields = ["txtMonitorSize"];
+          disableFields(fields);
+          txtAssetTagNumber.focus();
+
+          break;
+       case "E-Waste Container":
+          btnFeatures.hide();
+          lblMonitorSize.textContent = "Container Type/Size";
+          var fields = ["txtAssetTagNumber", "txtSerialNumber", "txtaDriveSerials",
+                        "txtMake", "txtModel" 
+                       ];
+
+          disableFields(fields);
+          txtMonitorSize.focus();
+          
+          break;
+       
+       default:   // leave fields enabled for Category cases not listed
+
+    } // end switch
+} // end function
+
+function disableFields(fieldArray) {
+// This function will disable a list of fields and add a css class to the fields to
+// provide a visual cue to the user that the fields are disabled.  Fields will also be
+// removed as tab stops.
+
+    var index;
+    for (index = 0; index < fieldArray.length; ++index) {
+        var e = document.getElementById(fieldArray[index]);   // Get element
+//        alert("disableFields: " + fieldArray[index] + " Type: " + e.type);
+
+        e.disabled = true;
+//        e.style.backgroundColor = "transparent"; // Change the color of the element
+        e.tabIndex = -1;
+        e.value = "";
+
+        if (e.type == "text" || e.type == "number") { // update class for text input on parent wrapper div generated by jQuery Mobile
+            var p = document.getElementById(e.parentNode.id);
+            var ea = []; // put element in array to pass to function that takes an array of element names
+            ea.push(fieldArray[index]);
+            setClearLinkOnFields(ea); // hide jquery mobile clear data link for empty fields
+
+//            p.className += " AvailDisabled";
+            p.style.backgroundColor ="#b2b2b2";
+            
+//            var anchors = p.getElementsByTagName('a'); // get child "clear text" anchor element(s) and add the ui-input-clear-hidden class
+//            for (var i = 0; i < anchors.length; i++) { 
+//                anchors[i].classList.add("ui-input-clear-hidden"); // hide clear anchor
+//            }
+        } else { // textarea does not have wrapper, update directly on element
+//            e.className += " AvailDisabled";
+            e.style.backgroundColor ="#b2b2b2";
+        } // end else
+    } // end for
+}
+
+function enableFields(fieldArray) {
+// This function will enable a list of fields and remove a css class on the fields 
+// so they do not appear grayed-out.  Fields will also be reenrolled in the natural tab
+// order by removing the tabindex attribute.
+
+    var index;
+    for (index = 0; index < fieldArray.length; ++index) {
+        var e = document.getElementById(fieldArray[index]);   // Get the element with id="demo"
+//        alert("enableFields: " + fieldArray[index] + " Type: " + e.type);
+
+        e.disabled = false;
+        e.removeAttribute("tabIndex");
+//        e.className = e.className.replace( /(?:^|\s)AvailDisabled(?!\S)/g , '' );
+
+        if (e.type == "text" || e.type == "number") { // update for text input on parent wrapper div generated by jQuery Mobile
+           var p = document.getElementById(e.parentNode.id);
+           p.style.backgroundColor ="#ffffff";
+             
+//           p.className = e.className.replace( /(?:^|\s)AvailDisabled(?!\S)/g , '' );
+        } else { // textarea does not have wrapper, update directly on element
+//            e.className = e.className.replace( /(?:^|\s)AvailDisabled(?!\S)/g , '' );
+             e.style.backgroundColor ="#ffffff";
+
+        } // end else
+    } // end for
+}
+
+function setClearLinkOnFields(fieldArray) {
+// This function will had the jquery mobile clear link on a input text or number field
+
+    var index;
+    for (index = 0; index < fieldArray.length; ++index) {
+        var e = document.getElementById(fieldArray[index]);   // Get element
+
+        if (e.type == "text" || e.type == "number") {
+            var p = document.getElementById(e.parentNode.id);
+            var anchors = p.getElementsByTagName('a'); // get child "clear text" anchor element(s) and add the ui-input-clear-hidden class
+            for (var i = 0; i < anchors.length; i++) {
+                if (e.value == "") { 
+                    anchors[i].classList.add("ui-input-clear-hidden"); // hide clear anchor
+                    console.log("hiding input-clear for " + fieldArray[index]);
+
+                } else {
+                    anchors[i].classList.remove("ui-input-clear-hidden"); // show clear anchor
+                    console.log("showing input-clear for " + fieldArray[index]);
+                }
+            } // end for
+         } // end if
+    } // end for      
+}
+
+selCategory.onchange=function(){
+    // clear out fields that are normally not cleared when adding new rows for the same category(e.g. txtMake, txtModel)
+    // these fields are cleared here rather than in the setFormFieldsForCategory so that the fields are not 
+
+    setFormFieldsForCategory(selCategory.selectedValue());
+}
+
+function populateMakes() {
+
+m = [
+ "Acer"
+,"Alienware (Dell)"
+,"AMD"
+,"Apple"
+,"Asus"
+,"Canon"
+,"Cisco"
+,"Cray"
+,"CyberPower PC"
+,"Dell"
+,"EMC"
+,"Epson"
+,"Everex"
+,"Falcon Northwest"
+,"Foxconn"
+,"Fujitsu"
+,"Gateway"
+,"Hewlett-Packard (HP)"
+,"Hitachi"
+,"HTC"
+,"Hyundai"
+,"IBM"
+,"IBuyPower"
+,"Intel"
+,"Lenovo"
+,"Lexmark"
+,"LG"
+,"Micron"
+,"Microsoft"
+,"Motorola"
+,"NCR"
+,"NEC"
+,"Olivetti"
+,"Panasonic"
+,"Sager"
+,"Samsung"
+,"Sharp Corporation"
+,"Sony"
+,"Toshiba"
+,"Unisys"
+,"ViewSonic"
+,"Vizio"
+,"Wyse Technology"
+];
+
+return m;
+}
+
+// ***** Code for form: frmSubmit *****
+window.addEventListener('load', function() {
+  frmSubmit.style.display = 'block';
+  NSB.addProperties(frmSubmit);
+  txtSendRequested.parentElement.id = 'txtSendRequested_wrapper';
+  txtSendRequested_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtSendRequested.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtSendRequested, txtSendRequested_wrapper);
+  $('#txtSendRequested_wrapper').removeClass('ui-shadow-inset');
+  $('#txtSendRequested_wrapper').removeClass('ui-corner-all');
+  txtSendRequested.style.height = (txtSendRequested.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtSendRequested);
+  NSB.addDisableProperty(btnSend);
+  NSB.addProperties(btnSend);
+
+  NSB.addProperties(htmlSendMsg,htmlSendMsg_scroller);
+
+  NSB.addProperties(htmlLoginMsg,htmlLoginMsg_scroller);
+  NSB.addDisableProperty(btnGoogleOAUTH);
+  NSB.addProperties(btnGoogleOAUTH);
+  ftrNavBarSubmit.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,ftrNavBarSubmit)};
+  NSB.FooterBar_jqm_init('ftrNavBarSubmit','Enter,Browse,Setup');
+  NSB.addProperties(ftrNavBarSubmit);
+  (function(){var d,i,s='frmEnter,frmBrowse,frmDefaults'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('ftrNavBarSubmit_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
+  frmSubmit.style.display = 'none';
+}, false);
+frmSubmit.onshow=function(){
+console.log("In frmSubmit.onshow");
+
+    var sendHtmlMsg =  "<span id='SendPicMsg'>&nbsp</span><span id='SendPicMsgCount'>&nbsp</span><p>&nbsp</p>" +
+                       "<span id='SendMsg'>&nbsp</span><span id='SendMsgRows'>&nbsp</span><p>&nbsp</p>" +
+                       "<span id='SendErrorMsg'>&nbsp</span><span id='SendErrorMsgCount'>&nbsp</span>";
+        
+    
+    htmlSendMsg.innerHTML = sendHtmlMsg; 
+    htmlSendMsg.refresh();
+
+// Before sending pictures, make sure user did not strand a picture in a pending delete state. This can occur if user select delete photo
+// button, but never re-saves the item from frmEnter.
+    restorePicFromDeletion();
+// disable active button highlighting
+    $("#ftrNavBarSubmit_0").removeClass("ui-btn-active");
+    $("#ftrNavBarSubmit_1").removeClass("ui-btn-active");
+    $("#ftrNavBarSubmit_2").removeClass("ui-btn-active");
+
+    innerDocNav = false;
+    currForm = "frmSubmit";
+// Set txtSendRequested to N as part of authentication initialization
+    txtSendRequested.value = "N";
+    checkAuth(); // show Google Login button if user is not yet authenticated for Google Drive API
+}
+
+function loadParams() {
+    console.log("loadParams called");
+//    DB = SqlOpenDatabase("equipmentData.db", "1.0", "Equipment Database");
+    var s = new Array(["Select * from equipmentData Where [Sent] <> 'Y' Order By [Item Key];", loadParamsDataHandler]);
+    Sql(DB, s);
+}
+
+function loadParamsDataHandler(transaction, result) {
+
+// Build request Param Array from SQL data
+    rowsSent = 0; // globals used to provide control totals to user after Submit AJAX has completed
+    SendErrors = 0;
+
+    var paramsArray = []; // new parmArray to be passed via Ajax to Google App Script web app
+    console.log("in loadParamsDataHandler");
+//    console.log("Transaction: ");
+//    console.log(transaction);
+    console.log("Result: ");
+    console.log(result);
+
+    DBrecords = result;
+    var sentDate = new Date();
+    console.log("Rows: " + DBrecords.rows.length);
+    var record;
+    if (DBrecords.rows.length == 0) {
+        btnSend.disabled = false;
+        btnLoadDB.disabled = false;
+        var sendHtmlMsg = "<span>&nbsp</span>";
+        htmlSendMsg.innerHTML = sendHtmlMsg;               
+        htmlSendMsg.refresh();
+
+        NSB.MsgBox("No data to send.",0, "Send Notification");
+
+        return;
+    }    
+
+    // provide completion messagek when all AJAX calls complete
+    $(document).ajaxStop(function() {
+        NSB.MsgBox("Send complete.",0, "Confirmation");
+        btnSend.disabled = false;
+
+//        sendHtml = "<p>Send Errors      : " + sendErrors + "</p>";
+//        htmlSendMsg.innerHTML += sendHtml;               
+//        htmlSendMsg.refresh();
+    });
+
+    document.getElementById("SendMsg").textContent = "Item Rows Sent: ";
+    document.getElementById("SendErrorMsg").textContent = "Item Send Errors: ";
+
+    blockSize = 5; // number of rows to send per ajax request; minimum = 1
+    var blockRowNum = 0;
+    var blockCount = 0;
+    var totRows = 0;
+    var row = "";
+ 
+    for (i = 0; i <= DBrecords.rows.length - 1; i++) {
+    // set variables for sending blocks of rows in a single request
+//        var paramsArray = []; // paramsArray passed via Ajax to Google App Script web app
+        totRows++
+        blockRowNum++
+        row = formatNumberLength(blockRowNum,3); //zero pad row num
+
+        record = DBrecords.rows.item(i);
+ 
+// Example parameter structure
+// build parameter string to be passed via Ajax to Google App Script that has been published as Web App
+// var Key = NameToSend.value
+// var paramsArray = [
+//  { name: "Make", value: IBM },
+//  { name: "Model", value: F50 },
+//  { name: "Item Key", value: 888 },
+//];
+
+//        console.log("Category: " + record["Category"]);
+
+        paramsArray.push({ name: "Item Key" + "-" + row, value: record["Item Key"] }); 
+//        console.log("paramsArray[0]: " + paramsArray[0]);
+        paramsArray.push({ name: "Category" + "-" + row, value: record["Category"] });
+        paramsArray.push({ name: "Asset Tag Number" + "-" + row, value: record["Asset Tag Number"] });
+        paramsArray.push({ name: "Serial Number" + "-" + row, value: record["Serial Number"] });
+        paramsArray.push({ name: "Make" + "-" + row, value: record["Make"] });
+        paramsArray.push({ name: "Model" + "-" + row, value: record["Model"] });
+        paramsArray.push({ name: "Item Qty" + "-" + row, value: record["Item Qty"] });
+        paramsArray.push({ name: "Project" + "-" + row, value: record["Project"] });
+        paramsArray.push({ name: "Customer" + "-" + row, value: record["Customer"] });
+        paramsArray.push({ name: "User Email" + "-" + row, value: record["User Email"] });
+        paramsArray.push({ name: "Collected Date" + "-" + row, value: record["Collected Date"] });
+        paramsArray.push({ name: "Location Lat" + "-" + row, value: record["Location Lat"] });
+        paramsArray.push({ name: "Location Long" + "-" + row, value: record["Location Long"] });
+        paramsArray.push({ name: "Batch Row Count" + "-" + row, value: DBrecords.rows.length });
+        paramsArray.push({ name: "Sent Date" + "-" + row, value: sentDate });
+        paramsArray.push({ name: "Processor Type" + "-" + row, value: record["Processor Type"] });
+        paramsArray.push({ name: "Processor Qty" + "-" + row, value: record["Processor Qty"] });
+        paramsArray.push({ name: "Processor Part Number" + "-" + row, value: record["Processor Part Number"] });
+        paramsArray.push({ name: "Memory Type" + "-" + row, value: record["Memory Type"] });
+        paramsArray.push({ name: "Memory Qty" + "-" + row, value: record["Memory Qty"] });
+        paramsArray.push({ name: "Memory Part Number" + "-" + row, value: record["Memory Part Number"] });
+        paramsArray.push({ name: "Storage Type" + "-" + row, value: record["Storage Type"] });
+        paramsArray.push({ name: "Storage Qty" + "-" + row, value: record["Storage Qty"] });
+        paramsArray.push({ name: "Storage Part Number" + "-" + row, value: record["Storage Part Number"] });
+        paramsArray.push({ name: "Other Feature Type" + "-" + row, value: record["Other Feature Type"] });
+        paramsArray.push({ name: "Other Feature Qty" + "-" + row, value: record["Other Feature Qty"] });
+        paramsArray.push({ name: "Other Feature Part Number" + "-" + row, value: record["Other Feature Part Number"] });
+        paramsArray.push({ name: "Condition Notes" + "-" + row, value: record["Condition Notes"] });
+        paramsArray.push({ name: "Monitor Size" + "-" + row, value: record["Monitor Size"] });
+        paramsArray.push({ name: "Drive Serial Numbers" + "-" + row, value: record["Drive Serial Numbers"] });
+        paramsArray.push({ name: "Photo URL" + "-" + row, value: record["Photo URL"] });
+
+// AjaxPost function is then called by setTimeout - Execution is time-staggered to prevent overloading the receiving
+// Google Sheets app script.
+// to stagger execution. Using an Immediately-Invoked Function Expression (IIFE) to provide closure for local 
+// variable values. 
+        if (blockRowNum == blockSize || totRows == DBrecords.rows.length) { // block full or last block, send block of records to server via AJAX
+            paramsArray.push({ name: "Rows", value: blockRowNum }); // number of rows in block
+            blockCount++
+            blockRowNum = 0;  // reset block row counter
+
+            (function(){
+                     var arg = clone(paramsArray); // create copy to pass to async function call
+                     var interval = blockCount*100; // space requests 100 milliseconds apart to avoid stampeding google service
+                     setTimeout(function () {
+                                             AjaxPost(arg);    
+                                            }, interval );
+                   }() ); // Invoke function
+
+            paramsArray.length = 0; // clear array for next block
+        
+        }  // end if for blockSize or Last Row AJAX call    
+ 
+    } // end for - equipmentData cursor
+
+//    console.log(paramsArrayArray);
+
+}
+
+function clone(obj) {// This does not support Date objects.  The date will not be preserved because the call to the Date constructor function
+// initializes the new Date with the current date/time. That value isn't enumerable and won't be copied by the for/in loop.
+
+    if(obj == null || typeof(obj) != 'object')
+        return obj;    
+    var temp = new obj.constructor(); 
+    for(var key in obj)
+        temp[key] = clone(obj[key]);    
+    return temp;
+}
+
+function AjaxPost(p) {
+// var paramsData = p;
+   var paramsData = $.param(p, true ) + "&callback=?";   // adding callback parameter for JSONP request.
+                                                         // JSONP requests considered valid cross-domain
+                                                         // requests and avoid request failure messages such as:
+                                                         // No 'Access-Control-Allow-Origin' header is present on the requested resource.
+//   console.log("paramsData: ");
+//   console.log(paramsData);
+ 
+// Fire off the request to Google Sheet bound App Script
+// Notes: contentType is what the client is sending to server
+//        dataType is what client is expecting back from server
+
+//        contentType: "application/x-www-form-urlencoded; charset=UTF-8", 
+//        contentType: "application/json; charset=utf-8",
+//        processData: false,
+//        data: JSON.stringify(paramsData)
+
+    request = $.ajax({
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        dataType: "jsonp",
+        url: appScriptWebService,
+        type: "get", // post not supported for jsonp requests
+        data: paramsData
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Ajax POST done. Status " + textStatus + " Response Result/Row/ItemKey: " + response.result +  "-" + response.row + "-" + response.itemkeys);
+//        console.log(response);
+        rowsSent = rowsSent + response.itemkeys.length;
+        document.getElementById("SendMsgRows").textContent = rowsSent;
+        for (var i=0; i<response.itemkeys.length; i++) {
+            updateSentFlag(response.itemkeys[i]);
+        }    
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error("Ajax fail textStatus: " + textStatus + "  errorThrown: " + errorThrown);
+        sendErrors++
+    });
+
+    // Callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        document.getElementById("SendErrorMsgCount").textContent = sendErrors;
+    });
+};
+// =============================================================
+function getPicsForSend() {
+    console.log("in getPicsForSend");
+//    DB = SqlOpenDatabase("equipmentData.db", "1.0", "Equipment Database");
+// ex: SELECT Name, Day FROM Customers AS C JOIN Reservations AS R ON C.CustomerId=R.CustomerId;
+
+    var sql = "SELECT P.[Item Key] AS [Item Key], [Pic Key], [Pic], [Status], [Customer], [Project], [Sent] from picData AS P " +
+              "INNER JOIN equipmentData AS E ON P.[Item Key] = E.[Item Key] " +
+              "Where P.[Status] = 'U' Order By P.[Item Key];"; 
+    var s = new Array([sql, getPicsForSendDataHandler]);
+    Sql(DB, s);
+}
+
+function getPicsForSendDataHandler(transaction, result) {
+
+// process picData cursor from SQL data
+    console.log("getPicsForSendDataHandler called");
+    console.log("Transaction: ");
+    console.log(transaction);
+    console.log("Result: ");
+    console.log(result);
+
+    DBrecords = result;
+    console.log("picData Rows: " + DBrecords.rows.length);
+    if (localStorage.getItem("PhotoUpload") == "true") {
+        var PhotoUpload = true; // check photo rotation setup option
+    } else {
+        var PhotoUpload = false;  // default in case was option never set
+    }
+    
+ // Show photo upload count even if photos are not selected for upload
+    document.getElementById("SendPicMsg").textContent = "Item Photos Sent: ";
+    document.getElementById("SendPicMsgCount").textContent = uploadPicResponseCount;
+
+    console.log("PhotoUpload: " + PhotoUpload);
+    if (DBrecords.rows.length == 0 || !PhotoUpload) { // if no pic data or pic upload turned off,
+        loadParams();                                       // then just run loadParams immediately to send item data
+    } else { // upload picture data first so resulting photo URL can be captured in equipmentData record prior to send    
+
+
+        uploadPicCount = DBrecords.rows.length // set global variable used to determine if all picture send requests
+                                               // have received responses from google api
+        var record;
+        for (i = 0; i <= DBrecords.rows.length - 1; i++) {
+            record = DBrecords.rows.item(i);
+            sendPic(record)
+        } // end for
+    } // end if        
+}
+
+// =============================================================
+function sendPic(record) {
+//   alert("sendPic");
+   console.log("in sendPic");
+   console.log("sendPic Item Key: " + record["Item Key"]);
+// store item key and picture data in globals so they are accessible by gapi.client
+
+var prepFileWithWrappedArguments = function(uploadItemKey, uploadPicKey, uploadPic, uploadCust, uploadProj)
+// immediate execution on outer function returns a new function with closures on local variable values at 
+// the time the inner function is generated (similar to using function.bind for affecting 'this')
+// Note: This was the only way to pass arguments to function passed to gapi.client.load)
+{
+        return function()
+        {
+            console.log("in function passed to gapi.client.load in Javascript Client Library");
+            var fileName = uploadCust + '-' + uploadProj + '-Item-' + uploadItemKey + '-' + uploadPicKey + '.png';
+            console.log("gapi.client.load fileName: " + fileName);
+            var mimeType = 'image/png';
+//        alert("title: " + fileName);
+//        alert("mimetype: " + mimeType);
+
+            var metadata = {
+                'name': fileName,
+                'mimeType': mimeType,
+                'parents': driveFolder
+            };
+            var pattern = 'data:' + mimeType + ';base64,';
+            var base64Data = uploadPic; // picture data
+            base64Data = base64Data.replace(pattern,''); // strip mimeType header
+//      alert("base64Data:" + base64Data);
+            insertFile(base64Data,metadata);
+         };
+    }(record["Item Key"], record["Pic Key"], record["Pic"], record["Customer"], record["Project"]); // immediate invocation
+
+// google client.js script included via extra headers in Project Properties
+    gapi.client.load('drive','v3', prepFileWithWrappedArguments);
+}
+
+/**
+* Insert new file.
+*
+* @param {Image} Base 64 image data
+* @param {Metadata} Image metadata
+* @param {Function} callback Function to call when the request is complete.
+*/
+function insertFile(base64Data, metadata, callback){
+    const boundary = '-------314159265358979323846';
+    const delimiter = "\r\n--" + boundary + "\r\n";
+    const close_delim = "\r\n--" + boundary + "--";
+    var contentType = metadata.mimeType || 'application/octet-stream';
+//    alert("contentType: " + contentType);
+    var multipartRequestBody =
+        delimiter +
+        'Content-Type: application/json; charset=UTF-8\r\n\r\n' +
+        JSON.stringify(metadata) +
+        delimiter +
+        'Content-Type: ' + contentType + '\r\n' +
+        'Content-Transfer-Encoding: base64\r\n' +
+        '\r\n' +
+        base64Data +
+        close_delim;
+
+//    console.log(multipartRequestBody); 
+
+    var request = gapi.client.request({'path' : '/upload/drive/v3/files',
+                                       'method' : 'POST',
+                                       'params' : {
+                                                   'uploadType' : 'multipart'
+                                                  },
+                                       'headers' : {
+                                                    'Content-Type' : 'multipart/related; boundary="' + boundary + '"'
+                                                   },
+                                       'body' : multipartRequestBody
+                                      });
+
+    if (!callback) {   // should update picture url and status flag on picData
+        callback = function (file) {
+                       console.log("insertFile callback File object response") 
+                       console.log(file);
+                       console.log("insertFile file.name: " + file.name)
+                       var s = file.name;
+// extract Item Key and Pic Key from server response for update purposes                       
+                       var itemKey = parseInt(s.substring(nthIndex(s,'-',3)+1,nthIndex(s,'-',4)));
+                       var picKey = parseInt(s.substring(nthIndex(s,'-',4)+1,nthIndex(s,'.',1)));
+                       var fileId = file.id;
+                       console.log("insertFile itemKey-picKey: " + itemKey + "-" + picKey);
+
+                       uploadPicResponseCount++;
+                       document.getElementById("SendPicMsgCount").textContent = uploadPicResponseCount;
+
+                       console.log("uploadPicResponseCount: " + uploadPicResponseCount + " uploadPicCount: " + uploadPicCount);
+                       if (uploadPicResponseCount == uploadPicCount) { // if done with pictures, pass
+                           updatePicURL(itemKey, fileId, loadParams);  // loadParams as callback to send Items
+                                                                       // after final Pic URL update  
+                       } else {                                        
+                           updatePicURL(itemKey, fileId);              // else just update Pic URL on equipmentData
+                       }    
+                       updatePicStatusFlagToSent(picKey); // mark picData picture as sent (Status = S)
+
+                   }; // end callback function assignment
+    }
+    request.execute(callback);
+}
+
+// =============================================================  
+btnSend.onclick=function(event){
+    var isOffline = 'onLine' in navigator && !navigator.onLine;
+
+    if ( isOffline ) {
+        NSB.MsgBox("Send error: Device is not online.",0, "Error");
+     } else {
+         txtSendRequested.value = "Y"; // triggers call to send process in checkAuth() if authentication is successful
+         btnSend.disabled = true;
+// initialize globals         
+//         uploadPic = "";
+//         uploadItemKey = 0;
+//         uploadPicKey = 0;
+//         uploadCust = "";
+//         uploadProj = "";
+         uploadPicCount = 0;
+         uploadPicResponseCount = 0;
+         
+         checkAuth();
+    }  
+};
+
+function updateSentFlag (itemKey) {
+    console.log("In updateSentFlag");
+    var sqlList = [];
+    var sent = "Y";
+    var args = [sent, itemKey];
+
+    sqlOperation = "UPDATE equipmentData Sent Flag to Y";
+    sqlList[0] = ["UPDATE equipmentData SET [Sent] = ? WHERE [Item Key] = ? ;", args, successDB, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+};
+
+function updatePicStatusFlagToSent (picKey) {
+    console.log("In updatePicStatusFlagToSent");
+    var sqlList = [];
+    var status = "S";
+    var args = [status, picKey];
+
+    sqlOperation = "UPDATE picData Status to S - Sent";
+    sqlList[0] = ["UPDATE picData SET [Status] = ? WHERE [Pic Key] = ? AND [Status] = 'U';", args, successDB, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+};
+
+function updatePicURL (itemKey, fileId, callback) {
+  
+    console.log("In updatePicURL");
+    if (callback && typeof callback === "function") {
+        cb = callback;
+    }  else {
+        cb = successDB; // use successDB if no callback or an invalid callback is passed
+    }
+
+    if (callback && typeof callback !== "function") {
+        console.warn("invalid callback function passed to updatePicURL"); // provide invalid callback warning
+    }    
+
+    var sqlList = [];
+    var URL = "https://drive.google.com/file/d/" + fileId + "/edit?usp=sharing";
+    var args = [URL, itemKey];
+    sqlOperation = "UPDATE pic URL on equipmentData";
+    sqlList[0] = ["UPDATE equipmentData SET [Photo URL] = ? WHERE [Item Key] = ? ;", args, cb, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+};
+
+ftrNavBarSubmit.onclick=function(){
+     innerDocNav = true;
+}
+
+function nthIndex(str, pat, n){ // return the position of the nth of occurrence of a substring within a string
+    var L= str.length, i= -1;
+    while(n-- && i++<L){
+        i= str.indexOf(pat, i);
+        if (i < 0) break;
+    }
+    return i;
+}
+
+/**
+* Check if current user has authorized this application.
+*/
+function checkAuth() {
+    gapi.auth.authorize(
+    {  
+      'client_id': apiClientId,
+      'scope': apiScopes.join(' '),
+      'immediate': true
+    }, checkAuthResultHandler);
+}
+
+/**
+* Handle response from authorization server.
+*
+* @param {Object} authResult Authorization result.
+*/
+function checkAuthResultHandler(authResult) {
+// This function's caller ,checkAuth, is called from frmSubmit.onshow and when the user selects the Send button.
+// When called from .onshow, the function just displays the Google Login button if authentication
+// has not yet been completed.
+// When this function is called via the Send button, it will invoke the main data send function if
+// authentication is already complete, else it will display the Google Login button.  It knows it was called from
+// Send button when the textbox txtSendRequested = Y.
+//    var authorizeDiv = document.getElementById('authorize-div');
+    if (authResult && !authResult.error) {
+// Hide auth UI, then load client library.
+        btnGoogleOAUTH.hide();
+        btnSend.disabled = false;
+        htmlLoginMsg.innerHTML = "<span>&nbsp</span>";
+          
+        if (txtSendRequested.value == "Y") { // authentication check at Send time was successful, continue
+                                             // with data transmission process
+            btnSend.disabled = true;
+            txtMode.value = "Add"; // make sure frmEnter is reinitialized after returning from Submit.  Don't want
+                                   // to redisplay an Item in update mode when that item is already submitted.
+
+            txtSendRequested.value = "N"; // Reset back to "N"
+//            getPicsForSend(); // loadParams is called to send Items after response for last picture sent is received
+                                // pictures are sent first so returned picture file id can be used to generate Photo URL on
+                                // equipmentData row prior to sending item data to Google Sheets.
+             apiSend();
+        }      
+    } else {
+    // Show auth UI, allowing the user to initiate authorization by
+    // clicking login button.
+    //    authorizeDiv.style.display = 'inline';
+          btnSend.disabled = true;
+          btnGoogleOAUTH.show();
+          htmlLoginMsg.innerHTML = "<span>To proceed, you must first sign into Google by clicking Login button.</span>";
+    }
+}
+
+/**
+* Initiate auth flow in response to user clicking authorize button.
+*
+* @param {Event} event Button click event.
+*/
+btnGoogleOAUTH.onclick=function(){
+    gapi.auth.authorize(
+    {client_id: apiClientId, scope: apiScopes, immediate: false},
+    checkAuthResultHandler);
+    return false;
+}
+
+function formatNumberLength(num, length) { // zero fill number to specified length
+    var r = "" + num;
+    while (r.length < length) {
+        r = "0" + r;
+    }
+    return r;
+}
+
+function apiSend() {
+
+var params =      {"Item Key-001":888,
+                   "Make-001":"HP",
+                   "Model-001":"F50", 
+                   "Item Key-002":889,
+                   "Make-002":"IBM",
+                   "Model-002":"F51",
+                   "Rows":2
+                  };
+
+//    var params = $.param(paramsArray, true )
+    var request = {
+            'function': 'setData',
+            'parameters': params,
+            'devMode': true // Optional.
+    };
+    
+    // Make the API request.
+    var op = gapi.client.request({
+            'root': 'https://script.googleapis.com',
+            'path': 'v1/scripts/' + apiScriptId + ':run',
+            'method': 'POST',
+            'body': request
+    });
+    op.execute(function(resp){ 
+        apiResponseHandler(resp);
+    });
+}
+
+function apiResponseHandler(resp) {
+    if (resp.error && resp.error.status) {
+        // The API encountered a problem before the script
+        // started executing.
+        console.log('Error calling API: ');
+        console.log(JSON.stringify(resp, null, 2));
+    } else if (resp.error) {
+        // The API executed, but the script returned an error.
+        // Extract the first (and only) set of error details.
+        // The values of this object are the script's 'errorMessage' and
+        // 'errorType', and an array of stack trace elements.
+        var error = resp.error.details[0];
+        console.log('Script error message: ' + error.errorMessage);
+        if (error.scriptStackTraceElements) {
+            // There may not be a stacktrace if the script didn't start
+            // executing.
+            console.log('Script error stacktrace:');
+            for (var i = 0; i < error.scriptStackTraceElements.length; i++) {
+                var trace = error.scriptStackTraceElements[i];
+                console.log(trace.function + ':' + trace.lineNumber);
+            }
+        }
+    } else {
+        // The structure of the result will depend upon what the Apps
+        // Script function returns. 
+//        console.log(resp.response.result);
+        console.log(resp);
+        var itemKeys = resp.response.result.itemkeys;
+        if (Object.keys(itemKeys).length == 0) {
+            console.log('No data returned!');
+        } else {
+            Object.keys(itemKeys).forEach(function(id) {
+                console.log(itemKeys[id]);
+            });
+        }
+    }
+}
+
+// ***** Code for form: frmBrowse *****
+window.addEventListener('load', function() {
+  frmBrowse.style.display = 'block';
+  NSB.addProperties(frmBrowse);
+  txtItemKeyToDelete.parentElement.id = 'txtItemKeyToDelete_wrapper';
+  txtItemKeyToDelete_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtItemKeyToDelete.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtItemKeyToDelete, txtItemKeyToDelete_wrapper);
+  $('#txtItemKeyToDelete_wrapper').removeClass('ui-shadow-inset');
+  $('#txtItemKeyToDelete_wrapper').removeClass('ui-corner-all');
+  txtItemKeyToDelete.style.height = (txtItemKeyToDelete.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtItemKeyToDelete);
+
+  NSB.addProperties(htmlBrowseMsg,htmlBrowseMsg_scroller);
+
+  NSB.addProperties(htmlBrowseCustProj,htmlBrowseCustProj_scroller);
+  grdList_ref = new IScroll(grdList_scroller,{ scrollX: true, freeScroll: true, mouseWheel:true, scrollbars:true, bounce:true, zoom:false, click:false,preventDefaultException:{tagName:/.*/},click:iScrollClick()});
+  grdList.refresh=function(){setTimeout(NSB.refresh,100,grdList_ref)};
+  grdList.cellstyle='height: 30px; font-size: 10px; white-space:nowrap;padding: 5px;';
+  grdList.colWidths='';
+  grdList.GridRefreshWidth=function(){setTimeout(NSB.GridRefreshWidth,10,grdList)};
+  NSB.Grid_init('grdList');
+  NSB.addProperties(grdList,grdList_scroller)
+  ftrNavBarBrowse.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,ftrNavBarBrowse)};
+  NSB.FooterBar_jqm_init('ftrNavBarBrowse','Enter,Submit,Setup');
+  NSB.addProperties(ftrNavBarBrowse);
+  (function(){var d,i,s='frmEnter,frmSubmit,frmDefaults'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('ftrNavBarBrowse_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
+  frmBrowse.style.display = 'none';
+}, false);
+frmBrowse.onshow=function(){
+    currForm = "frmBrowse";
+    innerDocNav = false;
+    console.log("In frmBrowse.onshow");
+
+// display customer and project from settings page (stored in localStorage)
+    var custproj ="<span>";
+    if (localStorage.getItem("DefaultCustomer")) {
+        custproj = custproj + localStorage.getItem("DefaultCustomer");
+    }
+    if (localStorage.getItem("DefaultProject")) { 
+        custproj = custproj + "&nbsp/&nbsp" + localStorage.getItem("DefaultProject");
+    }
+    custproj = custproj + "</span>";
+    htmlBrowseCustProj.innerHTML = custproj;
+    htmlBrowseCustProj.refresh();
+    
+// disable active button highlighting
+    $("#ftrNavBarBrowse_0").removeClass("ui-btn-active");
+    $("#ftrNavBarBrowse_1").removeClass("ui-btn-active");
+    $("#ftrNavBarBrowse_2").removeClass("ui-btn-active");
+
+//    s = new Array(["Select * from equipmentData Order By [Item Key] LIMIT 15 OFFSET 0;", loadGridgrdList]);
+    var s = new Array(["Select * from equipmentData Where [Sent] <> 'Y' Order By [Item Key] DESC;", loadGridgrdList]);
+    Sql(DB, s);
+}
+
+function editRow(event) { // this function triggered by user pushing edit button in first column of frmBrowse grdList
+
+  s=Split(event.target.parentNode.id, "_"); // get the button parent which is the table cell in the grid.
+//  alert("Click on " + s[0] +  " at row " +  s[1] + " and column " +  s[2]);
+
+  txtItemKey.value = grdList.getValue(s[1] , 1); // Item Key assumed to be column 1 (second column in zero-based scheme)
+  txtMode.value = "Update"
+  grdList.disabled = true;  // disable grid so another selection cannot be made before transferring to frmEnter
+  innerDocNav = true; // indicates proper in-app navigation to window.onhashchange event
+  ChangeForm(frmEnter);  // This triggers form onload for frmEnter which calls the form initialize procedure with viewState of Update
+  grdList.disabled = false;  // reenable grid control
+  return false;  // return false cancels normal form event from button onclick
+}
+
+function deleteRowConfirmation(event) { // this function triggered by user pushing delete button in first column of frmBrowse grdList
+  
+    var title = "Delete Confirmation";  
+    s=Split(event.target.parentNode.id, "_"); // get the button parent which is the table cell in the grid.
+    txtItemKeyToDelete.value = grdList.getValue(s[1] , 1); // Item Key assumed to be in column 1 (second column in zero-based scheme)
+
+// Yes/No Prompt. Call deleteRow on user response
+    grdList.disabled = true;  // disable so another selection cannot be made before row deleted
+    NSB.MsgBox(deleteRow,"Are you sure you want to delete item # " + txtItemKeyToDelete.value + "?", 4, title) // 4 = Yes/No
+    return false;  // return false cancels normal form event from button onclick
+}
+
+function deleteRow(result) { // this function triggered by user responding to delete confirmation message box
+    if (result == 7)  {return;}  // 7 = No, a "no" response cancels delete process
+
+    sqlOperation = "Delete equipmentData and picData rows via deleteRow";
+    var args = [txtItemKeyToDelete.value];
+    var sqlList = [];
+    sqlList[0] = ["DELETE from equipmentData WHERE [Item Key] = ? ;", args];  
+    sqlList[1] = ["DELETE from picData WHERE [Item Key] = ? ;", args];  
+    console.log(sqlList);
+    Sql(DB, sqlList);
+    htmlBrowseMsg.innerHTML = "<span>" + "Item " + txtItemKeyToDelete + " deleted</span>";
+    txtItemKeyToDelete.value = ""; // clear selected Item Key
+    innerDocNav = true;
+    ChangeForm(frmBrowse); // trigger onload procedure for frmBrowse to reload grid control
+    grdList.disabled = false;
+// clear msg after a delay   
+    setTimeout(function() {htmlBrowseMsg.innerHTML = "<span>&nbsp</span>";},1000);  // clear delete message after 1 second
+};
+
+grdList.onclick=function(){   // function not used at this point
+//  s=Split(event.target.id, "_");
+//  alert("Click on " + s[0] +  " at row " +  s[1] + " and column " +  s[2]);
+//  alert("Value is " + grdList.getValue(s[1] ,s[2]));
+}
+
+function loadGridgrdList(transaction, result) {
+    grdList.setRowHeight(0, "35px");
+    grdList.deleteRows(grdList.getRowCount()-1);  // clear grid except top row
+    var grdRow = 0;
+    DBrecords = result;
+    console.log("Rows to grdList: " + DBrecords.rows.length);
+    var record;
+    for (i = 0; i <= DBrecords.rows.length - 1; i++) {
+        record = DBrecords.rows.item(i);
+        grdList.addRows(1);
+        grdRow = 1 + i // 1 row offset due to grid header row
+//        grdList.setRowHeight(grdRow, "30px");
+ 
+//        console.log("Category: " + record["Category"]);
+
+//          grdList.setValue(grdRow, 0, "<a href='#' onclick='return editRow(this)'>Edit</a>"); //anchor tag doesn't work because it doesn't create event in all browsers
+          grdList.setValue(grdRow, 0, "<span>&nbsp&nbsp&nbsp&nbsp</span><button id=editbtn" + grdRow + " onclick='return editRow(event)'>&nbsp&nbspEdit&nbsp&nbsp</button><span>&nbsp&nbsp&nbsp&nbsp&nbsp</span><button id=deletebtn" + grdRow + " onclick='return deleteRowConfirmation(event)'>Delete</button><span>&nbsp&nbsp&nbsp&nbsp");
+          grdList.setValue(grdRow, 1, record["Item Key"]);
+          grdList.setValue(grdRow, 2, record["Category"]);
+          grdList.setValue(grdRow, 3, record["Asset Tag Number"]);
+          grdList.setValue(grdRow, 4, record["Serial Number"]);
+          grdList.setValue(grdRow, 5, record["Drive Serial Numbers"]);
+          grdList.setValue(grdRow, 6, record["Make"]);
+          grdList.setValue(grdRow, 7, record["Model"]);
+          grdList.setValue(grdRow, 8, record["Monitor Size"]);
+          grdList.setValue(grdRow, 9, record["Item Qty"]);
+
+          grdList.setValue(grdRow, 10,record["Condition Notes"]);
+          grdList.setValue(grdRow, 11,record["Processor Type"]);
+          grdList.setValue(grdRow, 12,record["Processor Qty"]);
+          grdList.setValue(grdRow, 13,record["Processor Part Number"]);
+          grdList.setValue(grdRow, 14,record["Memory Type"]);
+          grdList.setValue(grdRow, 15,record["Memory Qty"]);
+          grdList.setValue(grdRow, 16,record["Memory Part Number"]);
+          grdList.setValue(grdRow, 17,record["Storage Type"]);
+          grdList.setValue(grdRow, 18,record["Storage Qty"]);
+          grdList.setValue(grdRow, 19,record["Storage Part Number"]);
+          grdList.setValue(grdRow, 20,record["Other Feature Type"]);
+          grdList.setValue(grdRow, 21,record["Other Feature Qty"]);
+          grdList.setValue(grdRow, 22,record["Other Feature Part Number"]);
+          grdList.setValue(grdRow, 23, record["Customer"]);
+          grdList.setValue(grdRow, 24, record["Project"]);
+//          grdList.setValue(grdRow, 10, record["User Email"]);
+          grdList.setValue(grdRow, 25, record["Collected Date"]);
+          grdList.setValue(grdRow, 26, record["Location Lat"]);
+          grdList.setValue(grdRow, 27, record["Location Long"]);
+
+    } // end Dbrecords for loop
+
+// Set row height, column width, and background color (note: column width only works when grid style set to: table-layout:fixed;)
+// Seems to work better without the table-layout: fixed, but then using cellstyle: white-space:nowrap;
+// With the white-space settings, rows do no grow in height due to word wrapping at space characters
+for(row=1; row <= DBrecords.rows.length; row++) {
+//        grdList.setRowHeight(row, "25px");
+        for(col=0; col < 28; col++) {
+//             grdList.setColumnWidth(col, "100px")
+ 
+            //Paints each row in alternating color.
+            if((Math.abs(row) % 2) == 1) {
+                grdList.cell(row,col).style.backgroundColor = RGB(224,224,224); // odd rows (light)
+            } else {
+            grdList.cell(row,col).style.backgroundColor = RGB(208,208,208);  // even rows (dark)
+            }
+        } // end col for loop
+    } // end row for loop
+
+    grdList.refresh();
+}
+
+ftrNavBarBrowse.onclick=function(e){
+   innerDocNav = true;
+// changed 4/15/2016 to not set txtMode to Add. This allows user to return to frmEnter from frmBrowse without resetting
+// frmEnter. This allows the user to view frmBrowse and then return to frmEnter to complete add of a
+// partially entered Item record
+   
+//  console.log("Event object is: ");  
+//  console.log(e);
+    var id = e.path[0].id; // retrieve 
+    if (id == "ftrNavBarBrowse_0")  {
+                                    
+        if (txtMode.value == "Add") {
+            txtMode.value = "Browse"; // set mode to Browse so frmEnter will not be cleared if the user returns from the
+                                     // browse screen without going into Update (Edit button) mode. This allows user
+                                    // to return to a pending row Add without form fields being cleared
+        }                         
+    }
+}
+// ***** Code for form: frmFeatures *****
+window.addEventListener('load', function() {
+  frmFeatures.style.display = 'block';
+  NSB.addProperties(frmFeatures);
+
+  NSB.addProperties(lblProcessor);
+
+  NSB.addProperties(lblProcessorType);
+  txtProcessorType.parentElement.id = 'txtProcessorType_wrapper';
+  txtProcessorType_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtProcessorType.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtProcessorType, txtProcessorType_wrapper);
+  $('#txtProcessorType_wrapper').removeClass('ui-shadow-inset');
+  $('#txtProcessorType_wrapper').removeClass('ui-corner-all');
+  txtProcessorType.style.height = (txtProcessorType.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtProcessorType);
+
+  NSB.addProperties(lblProcessorQty);
+  txtProcessorQty.parentElement.id = 'txtProcessorQty_wrapper';
+  txtProcessorQty_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtProcessorQty.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtProcessorQty, txtProcessorQty_wrapper);
+  $('#txtProcessorQty_wrapper').removeClass('ui-shadow-inset');
+  $('#txtProcessorQty_wrapper').removeClass('ui-corner-all');
+  txtProcessorQty.style.height = (txtProcessorQty.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtProcessorQty);
+
+  NSB.addProperties(lblProcessorPartNo);
+  txtProcessorPartNo.parentElement.id = 'txtProcessorPartNo_wrapper';
+  txtProcessorPartNo_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtProcessorPartNo.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtProcessorPartNo, txtProcessorPartNo_wrapper);
+  $('#txtProcessorPartNo_wrapper').removeClass('ui-shadow-inset');
+  $('#txtProcessorPartNo_wrapper').removeClass('ui-corner-all');
+  txtProcessorPartNo.style.height = (txtProcessorPartNo.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtProcessorPartNo);
+  NSB.addProperties(linProcessor);
+
+  NSB.addProperties(lblMemory);
+
+  NSB.addProperties(lblMemoryType);
+  txtMemoryType.parentElement.id = 'txtMemoryType_wrapper';
+  txtMemoryType_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMemoryType.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMemoryType, txtMemoryType_wrapper);
+  $('#txtMemoryType_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMemoryType_wrapper').removeClass('ui-corner-all');
+  txtMemoryType.style.height = (txtMemoryType.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMemoryType);
+
+  NSB.addProperties(lblMemoryQty);
+  txtMemoryQty.parentElement.id = 'txtMemoryQty_wrapper';
+  txtMemoryQty_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMemoryQty.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMemoryQty, txtMemoryQty_wrapper);
+  $('#txtMemoryQty_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMemoryQty_wrapper').removeClass('ui-corner-all');
+  txtMemoryQty.style.height = (txtMemoryQty.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMemoryQty);
+
+  NSB.addProperties(lblMemoryPartNo);
+  txtMemoryPartNo.parentElement.id = 'txtMemoryPartNo_wrapper';
+  txtMemoryPartNo_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtMemoryPartNo.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtMemoryPartNo, txtMemoryPartNo_wrapper);
+  $('#txtMemoryPartNo_wrapper').removeClass('ui-shadow-inset');
+  $('#txtMemoryPartNo_wrapper').removeClass('ui-corner-all');
+  txtMemoryPartNo.style.height = (txtMemoryPartNo.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtMemoryPartNo);
+  NSB.addProperties(linMemory);
+
+  NSB.addProperties(lblStorage);
+
+  NSB.addProperties(lblStorageType);
+  txtStorageType.parentElement.id = 'txtStorageType_wrapper';
+  txtStorageType_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtStorageType.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtStorageType, txtStorageType_wrapper);
+  $('#txtStorageType_wrapper').removeClass('ui-shadow-inset');
+  $('#txtStorageType_wrapper').removeClass('ui-corner-all');
+  txtStorageType.style.height = (txtStorageType.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtStorageType);
+
+  NSB.addProperties(lblStorageQty);
+  txtStorageQty.parentElement.id = 'txtStorageQty_wrapper';
+  txtStorageQty_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtStorageQty.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtStorageQty, txtStorageQty_wrapper);
+  $('#txtStorageQty_wrapper').removeClass('ui-shadow-inset');
+  $('#txtStorageQty_wrapper').removeClass('ui-corner-all');
+  txtStorageQty.style.height = (txtStorageQty.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtStorageQty);
+
+  NSB.addProperties(lblStoragePartNo);
+  txtStoragePartNo.parentElement.id = 'txtStoragePartNo_wrapper';
+  txtStoragePartNo_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtStoragePartNo.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtStoragePartNo, txtStoragePartNo_wrapper);
+  $('#txtStoragePartNo_wrapper').removeClass('ui-shadow-inset');
+  $('#txtStoragePartNo_wrapper').removeClass('ui-corner-all');
+  txtStoragePartNo.style.height = (txtStoragePartNo.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtStoragePartNo);
+  NSB.addProperties(linStorage);
+
+  NSB.addProperties(lblFeature);
+
+  NSB.addProperties(lblFeatureType);
+  txtFeatureType.parentElement.id = 'txtFeatureType_wrapper';
+  txtFeatureType_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtFeatureType.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtFeatureType, txtFeatureType_wrapper);
+  $('#txtFeatureType_wrapper').removeClass('ui-shadow-inset');
+  $('#txtFeatureType_wrapper').removeClass('ui-corner-all');
+  txtFeatureType.style.height = (txtFeatureType.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtFeatureType);
+
+  NSB.addProperties(lblFeatureQty);
+  txtFeatureQty.parentElement.id = 'txtFeatureQty_wrapper';
+  txtFeatureQty_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtFeatureQty.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtFeatureQty, txtFeatureQty_wrapper);
+  $('#txtFeatureQty_wrapper').removeClass('ui-shadow-inset');
+  $('#txtFeatureQty_wrapper').removeClass('ui-corner-all');
+  txtFeatureQty.style.height = (txtFeatureQty.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtFeatureQty);
+
+  NSB.addProperties(lblFeaturePartNo);
+  txtFeaturePartNo.parentElement.id = 'txtFeaturePartNo_wrapper';
+  txtFeaturePartNo_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtFeaturePartNo.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtFeaturePartNo, txtFeaturePartNo_wrapper);
+  $('#txtFeaturePartNo_wrapper').removeClass('ui-shadow-inset');
+  $('#txtFeaturePartNo_wrapper').removeClass('ui-corner-all');
+  txtFeaturePartNo.style.height = (txtFeaturePartNo.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtFeaturePartNo);
+  NSB.addDisableProperty(btnReturn);
+  NSB.addProperties(btnReturn);
+  frmFeatures.style.display = 'none';
+}, false);
+btnReturn.onclick=function(){
+  innerDocNav = true;
+  ChangeForm(frmEnter);
+}
+
+frmFeatures.onshow=function(){
+  currForm = "frmFeatures";
+  innerDocNav = false;
+}
+
+// ***** Code for form: frmDefaults *****
+window.addEventListener('load', function() {
+  frmDefaults.style.display = 'block';
+  NSB.addProperties(frmDefaults);
+
+  NSB.addProperties(htmlDefaultsMsg,htmlDefaultsMsg_scroller);
+
+  NSB.addProperties(Label1);
+  txtDefaultCustomer.parentElement.id = 'txtDefaultCustomer_wrapper';
+  txtDefaultCustomer_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtDefaultCustomer.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtDefaultCustomer, txtDefaultCustomer_wrapper);
+  $('#txtDefaultCustomer_wrapper').removeClass('ui-shadow-inset');
+  $('#txtDefaultCustomer_wrapper').removeClass('ui-corner-all');
+  txtDefaultCustomer.style.height = (txtDefaultCustomer.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtDefaultCustomer);
+
+  NSB.addProperties(Label2);
+  txtDefaultProject.parentElement.id = 'txtDefaultProject_wrapper';
+  txtDefaultProject_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtDefaultProject.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtDefaultProject, txtDefaultProject_wrapper);
+  $('#txtDefaultProject_wrapper').removeClass('ui-shadow-inset');
+  $('#txtDefaultProject_wrapper').removeClass('ui-corner-all');
+  txtDefaultProject.style.height = (txtDefaultProject.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtDefaultProject);
+  NSB.addDisableProperty(btnSaveDefaults);
+  NSB.addProperties(btnSaveDefaults);
+  ftrNavBarDefaults.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,ftrNavBarDefaults)};
+  NSB.FooterBar_jqm_init('ftrNavBarDefaults','Enter,Browse,Submit');
+  NSB.addProperties(ftrNavBarDefaults);
+  (function(){var d,i,s='frmEnter,frmBrowse,frmSubmit'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('ftrNavBarDefaults_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
+  $('#flpRotatePhoto .ui-flipswitch').css('margin','0px');
+  flpRotatePhoto.value=function() {return flpRotatePhoto_inner.options[flpRotatePhoto_inner.selectedIndex].innerHTML;}
+  flpRotatePhoto.setting=function() {return flpRotatePhoto_inner.options[flpRotatePhoto_inner.selectedIndex].innerHTML!='Off';}
+  flpRotatePhoto.setValue=function(n) {$('#flpRotatePhoto_inner').val(n).flipswitch('refresh'); }
+  $('#flpRotatePhoto .ui-flipswitch').removeClass('ui-shadow-inset');
+  $('#flpRotatePhoto .ui-flipswitch-on').removeClass('ui-shadow');
+  NSB.addDisableProperty(flpRotatePhoto);NSB.addProperties(flpRotatePhoto);
+
+  NSB.addProperties(lblRotatePhoto);
+  $('#flpPhotoUpload .ui-flipswitch').css('margin','0px');
+  flpPhotoUpload.value=function() {return flpPhotoUpload_inner.options[flpPhotoUpload_inner.selectedIndex].innerHTML;}
+  flpPhotoUpload.setting=function() {return flpPhotoUpload_inner.options[flpPhotoUpload_inner.selectedIndex].innerHTML!='Off';}
+  flpPhotoUpload.setValue=function(n) {$('#flpPhotoUpload_inner').val(n).flipswitch('refresh'); }
+  $('#flpPhotoUpload .ui-flipswitch').removeClass('ui-shadow-inset');
+  $('#flpPhotoUpload .ui-flipswitch-on').removeClass('ui-shadow');
+  NSB.addDisableProperty(flpPhotoUpload);NSB.addProperties(flpPhotoUpload);
+
+  NSB.addProperties(lblPhotoUpload);
+
+  NSB.addProperties(lblRotatePhotoDegrees);
+  txtRotatePhotoDegrees.parentElement.id = 'txtRotatePhotoDegrees_wrapper';
+  txtRotatePhotoDegrees_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');
+  txtRotatePhotoDegrees.addEventListener('touchmove', function(e) {e.stopPropagation();}, false);
+  NSB.addProperties(txtRotatePhotoDegrees, txtRotatePhotoDegrees_wrapper);
+  $('#txtRotatePhotoDegrees_wrapper').removeClass('ui-shadow-inset');
+  $('#txtRotatePhotoDegrees_wrapper').removeClass('ui-corner-all');
+  txtRotatePhotoDegrees.style.height = (txtRotatePhotoDegrees.clientHeight + 2) + 'px';
+  NSB.addDisableProperty(txtRotatePhotoDegrees);
+
+  NSB.addProperties(lblRotatePhotoDegrees2);
+  frmDefaults.style.display = 'none';
+}, false);
+frmDefaults.onshow=function(){
+    currForm = "frmDefaults";
+    innerDocNav = false;
+
+    if (localStorage.getItem("DefaultCustomer")) {
+        txtDefaultCustomer.value = localStorage.getItem("DefaultCustomer");
+    }
+
+    if (localStorage.getItem("DefaultProject")) { 
+        txtDefaultProject.value = localStorage.getItem("DefaultProject");
+    }
+    if (localStorage.getItem("PhotoUpload") == "true") { 
+        flpPhotoUpload.setting(true);
+        flpPhotoUpload.setValue("On");
+
+    } else {
+        flpPhotoUpload.setting(false);
+        flpPhotoUpload.setValue("Off");
+    }   
+    
+    if (localStorage.getItem("RotatePhoto") == "true") {
+        if (localStorage.getItem("RotatePhotoDegrees")) {
+            txtRotatePhotoDegrees.value = localStorage.getItem("RotatePhotoDegrees");
+        }
+        flpRotatePhoto.setting(true);
+        flpRotatePhoto.setValue("On");
+        lblRotatePhotoDegrees.show();
+        txtRotatePhotoDegrees.show();
+        lblRotatePhotoDegrees2.show();
+    } else {
+        flpRotatePhoto.setting(false);
+        flpRotatePhoto.setValue("Off");
+        lblRotatePhotoDegrees.hide();
+        txtRotatePhotoDegrees.hide();
+        lblRotatePhotoDegrees2.hide();
+    }
+
+// Remove highlight on footer bar
+//    alert("in frmDefaults.onshow");
+    $("#ftrNavBarDefaults_0").removeClass("ui-btn-active");
+    $("#ftrNavBarDefaults_1").removeClass("ui-btn-active");
+    $("#ftrNavBarDefaults_2").removeClass("ui-btn-active");
+}
+  
+btnSaveDefaults.onclick=function(){
+    var cust = txtDefaultCustomer.value;
+    var proj = txtDefaultProject.value;
+    // remove special characters because Cust and Proj are used in picture file names and the
+    // hyphen is also used in picture file names to delimit the Item Key and Picture Key values.  Removing
+    // special characters avoids potential delimeter issues when the file name is returned from
+    // the google api.
+    cust = cust.replace(/[^a-zA-Z0-9]/g,' '); // replace special characters with space
+    proj = proj.replace(/[^a-zA-Z0-9]/g,' '); // replace special characters with space
+
+    localStorage.setItem("DefaultCustomer", cust);
+    localStorage.setItem("DefaultProject", proj);
+
+// show updated Cust and Proj values after special characters removed   
+    if (localStorage.getItem("DefaultCustomer")) {
+        txtDefaultCustomer.value = localStorage.getItem("DefaultCustomer");
+    }
+    if (localStorage.getItem("DefaultProject")) { 
+        txtDefaultProject.value = localStorage.getItem("DefaultProject");
+    }
+
+// save other options from checkbox elements
+    if (document.getElementById("flpPhotoUpload").setting()) {
+        localStorage.setItem("PhotoUpload", "true");
+    } else {
+        localStorage.setItem("PhotoUpload", "false");
+    }    
+    
+    if (document.getElementById("flpRotatePhoto").setting()) { 
+        localStorage.setItem("RotatePhoto", "true");
+        localStorage.setItem("RotatePhotoDegrees", txtRotatePhotoDegrees.valueAsNumber);
+
+    } else {
+        localStorage.setItem("RotatePhoto", "false");
+        txtRotatePhotoDegrees.disabled;
+    }
+
+    htmlDefaultsMsg.innerHTML = "<span>Defaults saved</span>"; // set message
+    setInterval(function () {htmlDefaultsMsg.innerHTML = "<span>&nbsp&nbsp</span>";}, 1500);
+}
+
+ftrNavBarDefaults.onclick=function(){
+     innerDocNav = true;
+}
+
+flpRotatePhoto.onchange=function(){
+   
+    if (document.getElementById("flpRotatePhoto").setting()) { 
+        lblRotatePhotoDegrees.show();
+        lblRotatePhotoDegrees2.show();
+        if (localStorage.getItem("RotatePhotoDegrees")) { // get previous setting, if any
+            txtRotatePhotoDegrees.value = localStorage.getItem("RotatePhotoDegrees");
+        } else {
+            txtRotatePhotoDegrees.value = 90;
+        }
+        txtRotatePhotoDegrees.show();
+    } else {
+        lblRotatePhotoDegrees.hide();
+        lblRotatePhotoDegrees2.hide();
+        txtRotatePhotoDegrees.hide();
+    }
+}
+
+// ***** Code for form: frmUtil *****
+window.addEventListener('load', function() {
+  frmUtil.style.display = 'block';
+  NSB.addProperties(frmUtil);
+
+  NSB.addProperties(Label3);
+  NSB.addDisableProperty(btnMarkUnsent);
+  NSB.addProperties(btnMarkUnsent);
+  NSB.addDisableProperty(btnLoadDB);
+  NSB.addProperties(btnLoadDB);
+  NSB.addDisableProperty(btnClearDB);
+  NSB.addProperties(btnClearDB);
+  NSB.addDisableProperty(btnReturnToEntry);
+  NSB.addProperties(btnReturnToEntry);
+  frmUtil.style.display = 'none';
+}, false);
+frmUtil.onshow=function(){
+    currForm = "frmUtil";
+    innerDocNav = false;
+}
+
+btnLoadDB.onclick=function(){
+    btnLoadDB.disabled = true;
+    btnClearDB.disabled = true;
+    btnMarkUnsent.disabled = true;
+    
+    var ItemKey = null;
+    var Category = "Server";
+    var AssetTagNumber = "123456789";
+    var SerialNumber = "987654321";
+    var Make = "Dell";
+    var Model = "Mega Server";
+    var ItemQty = 1;
+    var Project = "BigCorp01";
+    var Customer = "BigCorp";
+    var UserEmail = "";
+    var CollectedDate = new Date(); 
+    var LocationLat = 42.2151313;
+    var LocationLong = -83.7707406;
+    var ProcessorType = "I7";
+    var ProcessorQty = 1;
+    var ProcessorPartNo = "12345";
+    var MemoryType = "16GB";
+    var MemoryQty = 1;
+    var MemoryPartNo = "678910";
+    var StorageType = "SATA 500GB";
+    var StorageQty = 1;
+    var StoragePartNo = "1112131415";
+    var OtherType = "Fancy Feature";
+    var OtherQty = 1;
+    var OtherPartNo = "1617181920";
+    var ConditionNotes = "Good";
+    var MonitorSize = "17";
+    var DriveSerials = "1234567891011121314151617181920";
+//    var PhotoURL = "https://drive.google.com/open?id=0B_ogwGr0xoHKYml2ZVdkXzFOakk";
+    var PhotoURL = "";
+    var Sent = "N";
+    
+    var sqlList = [];
+    var args = [Category, AssetTagNumber, SerialNumber, Make, Model, ItemQty, Customer, Project, UserEmail, CollectedDate, LocationLat, LocationLong, ProcessorType, ProcessorQty, ProcessorPartNo, MemoryType, MemoryQty, MemoryPartNo, StorageType, StorageQty, StoragePartNo, OtherType, OtherQty, OtherPartNo, ConditionNotes, MonitorSize, DriveSerials, PhotoURL, Sent]
+    sqlOperation = "INSERT";
+       var numRows = 50;
+       var cb = successDB;
+       for (i = 0; i < numRows; i++) {
+           if (i == numRows -1) cb = completeMsg; // last row add complete message callback  
+           sqlList[i] = ["INSERT INTO equipmentData ([Category], [Asset Tag Number], [Serial Number], [Make], [Model], [Item Qty], [Customer], [Project], [User Email], [Collected Date], [Location Lat], [Location Long], [Processor Type], [Processor Qty], [Processor Part Number], [Memory Type], [Memory Qty], [Memory Part Number], [Storage Type], [Storage Qty], [Storage Part Number], [Other Feature Type], [Other Feature Qty] , [Other Feature Part Number], [Condition Notes], [Monitor Size], [Drive Serial Numbers], [Photo URL], [Sent]) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);", args, cb, failDB ];
+       }; // end for
+       console.log(sqlList)
+       Sql(DB, sqlList);
+}
+
+btnClearDB.onclick=function(){
+
+    btnLoadDB.disabled = true;
+    btnClearDB.disabled = true;
+    btnMarkUnsent.disabled = true;
+    var sqlList = [];
+    sqlList[0] = ["DELETE FROM equipmentData;", clearAllPicData, failDB];
+    console.log(sqlList)
+    Sql(DB, sqlList);
+
+}
+
+function completeMsg() {
+    NSB.MsgBox("Process complete.",0, "Confirmation");
+    btnLoadDB.disabled = false;
+    btnClearDB.disabled = false;
+    btnMarkUnsent.disabled = false;
+}
+
+function clearAllPicData() {
+    var sqlList = [];
+    sqlList[0] = ["DELETE FROM picData;", completeMsg, failDB];
+    console.log(sqlList)
+    Sql(DB, sqlList);
+}
+
+function mark_equipmentDataUnsent() {
+    var sqlList = [];
+    sqlList[0] = ["UPDATE equipmentData SET [Sent] = 'N', [Photo URL] = null WHERE [Sent] ='Y';", mark_picDataUnsent, failDB];
+    console.log(sqlList)
+    Sql(DB, sqlList);
+}
+
+function mark_picDataUnsent() {
+    var sqlList = [];
+    sqlList[0] = ["UPDATE picData SET [Status] = 'U' WHERE [Status] ='S' AND [Item Key] IN (SELECT [Item Key] FROM equipmentData);", completeMsg, failDB];
+    console.log(sqlList)
+    Sql(DB, sqlList);
+}
+
+btnMarkUnsent.onclick=function(){
+    btnLoadDB.disabled = true;
+    btnClearDB.disabled = true;
+    btnMarkUnsent.disabled = true;
+    mark_equipmentDataUnsent(); // also triggers mark_picDataUnsent as callback  
+}
+
+btnReturnToEntry.onclick=function(){
+  innerDocNav = true;
+  ChangeForm(frmEnter);
+}
+
+// ***** Code for form: frmItemPhoto *****
+window.addEventListener('load', function() {
+  frmItemPhoto.style.display = 'block';
+  NSB.addProperties(frmItemPhoto);
+  NSB.addProperties(inputPhoto);
+
+  NSB.addDisableProperty(btnPhoto);
+  NSB.addProperties(btnPhoto);
+  NSB.addDisableProperty(btnPhotoDelete);
+  NSB.addProperties(btnPhotoDelete);
+  NSB.addProperties(PreviewPic_wrapper);
+
+
+  NSB.addProperties(htmlItemPhotoMsg,htmlItemPhotoMsg_scroller);
+  NSB.addDisableProperty(btnPhotoReturn);
+  NSB.addProperties(btnPhotoReturn);
+  frmItemPhoto.style.display = 'none';
+}, false);
+frmItemPhoto.onshow=function(){
+    console.log("In frmPhoto.onshow");
+    innerDocNav = false;
+    currForm = "frmItemPhoto";
+// show Remove Photo button if photo preview element(s) exists
+    var div = document.getElementById("PreviewPic_wrapper");
+    if (div.hasChildNodes()) {btnPhotoDelete.show()};   
+}
+
+function displayPic(imageURI){     
+    console.log("in displayPic");
+    console.log(imageURI);              // this element is included in the inputPhoto container <div> on the page
+
+    var reader = new FileReader();
+    reader.onload = function(frEvent) {
+    
+        var img = new Image();
+
+        img.onload = 
+        function(){
+            var saveOrientation = deviceOrientation; // grab orientation at time of picture save because potrait
+                                                         // mode images need to be rotated
+//          alert("saveOrientation" + saveOrientation);
+// create an offscreen canvas to downsize image
+            var picCanvas = document.createElement('canvas');
+            var srcHeight = img.height;
+            var srcWidth = img.width;
+//          alert("before resize width/height: " + img.width + " / " + img.height);
+            var maxWidth = 1000;
+            var maxHeight = 1000;
+            var ratio = [maxWidth / srcWidth, maxHeight / srcHeight ];
+            ratio = Math.min(ratio[0], ratio[1]);
+            newWidth = srcWidth*ratio;
+            newHeight = srcHeight*ratio;
+            picCanvas.width = newWidth // + "px";
+            picCanvas.height = newHeight // + "px";
+ //       alert("picCanvas width/height: " + picCanvas.width + " / " + picCanvas.height);
+ 
+            var ctx = picCanvas.getContext("2d");
+            ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
+                 // now rotate into second canvas, if needed.
+            var rotationDegrees = 0;
+
+            if (localStorage.getItem("RotatePhoto") == "true") {
+                var rotate = true;
+            } else {
+                var rotate = false;
+            }  
+
+            console.log("RotatePhoto option: " + rotate);
+            
+            if (rotate) {
+//              if (saveOrientation == "P" && rotate) {
+
+                if (localStorage.getItem("RotatePhotoDegrees")) {
+                    rotationDegrees = parseInt(localStorage.getItem("RotatePhotoDegrees"), 10);  // retrieve setting 
+                } else {
+                    rotationDegrees = 90;   // default in case was option never set
+                }  
+
+                picCanvas = rotateImage(rotationDegrees, picCanvas); 
+            }    
+
+            showPreviewPicAndSaveToDB(picCanvas);
+
+        };  // end img.onload
+ 
+        img.src = frEvent.target.result;
+    }; // end reader.onload
+    reader.readAsDataURL(imageURI);
+}
+
+function rotateImage(degrees, picCanvas){
+   console.log("in RotateImage");
+//   alert("in RotateImage");
+// create an OFFSCREEN canvas for rotation
+ 
+    var picCanvas2 = document.createElement('canvas');
+    var ctx=picCanvas2.getContext("2d");
+    
+    if(degrees == 90 || degrees == 270) {
+        picCanvas2.width = picCanvas.height;
+        picCanvas2.height = picCanvas.width;
+    } else {
+        picCanvas2.width = picCanvas.width;
+        picCanvas2.height = picCanvas.height;
+    }
+    
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height); // clear destination canvas
+
+    if(degrees == 90 || degrees == 270) {
+        ctx.translate(picCanvas.height/2,picCanvas.width/2);
+    } else {
+        ctx.translate(picCanvas.width/2,picCanvas.height/2);
+    }
+    ctx.rotate(degrees*Math.PI/180);
+    ctx.drawImage(picCanvas,-picCanvas.width/2,-picCanvas.height/2); // picCanvas2 now has image to be saved in DB
+    
+    return picCanvas2;
+}
+
+function showPreviewPicAndSaveToDB(picCanvas2){
+// show rotated preview picture and save resized/rotated Pic to DB with a Status of "T". 
+// Status will be changed to "U" for Unsent if the user actually save the item from frmEnter.
+
+
+    var srcHeight = picCanvas2.height;
+    var srcWidth = picCanvas2.width;
+//               alert("srcWidth/srcHeight: " + srcWidth + "  " + srcHeight );
+    var maxWidth = 370;
+    var maxHeight = 370;
+    var ratio = [maxWidth / srcWidth, maxHeight / srcHeight ];
+    ratio = Math.min(ratio[0], ratio[1]);
+//               alert("ratio: " + ratio);
+    newWidth = srcWidth*ratio;
+    newHeight = srcHeight*ratio;
+    var picCanvas3 = document.createElement('canvas');
+    var ctx3 = picCanvas3.getContext("2d");
+//               ctx2.clearRect(0,0,ctx2.canvas.width,ctx2.canvas.height);
+    picCanvas3.height = newHeight;
+    picCanvas3.width = newWidth;
+    ctx3.drawImage(picCanvas2, 0, 0, newWidth, newHeight);
+// delete existing preview pic, if it exists, and then add new previewPic           
+    var picName = "PreviewPic";
+    var elem = document.getElementById(picName);
+    picCanvas3.id = picName;
+    picCanvas3.style.display = "table"; // center in wrapper div
+    picCanvas3.style.margin = "0 auto"; // center in wrapper div
+
+    var itemKey = null; // Assume Add Mode where item key not yet assigned to new Item; 
+                        // Item Key will be updated on picData
+                        // when user saves new Item.
+    if (txtMode.value == "Update") { // if update mode, use Item Key from frmEnter
+        var itemKey = txtItemKey.valueAsNumber;  
+    }
+// mark any existing pics for deletion and then callback to save new pic to picData table    
+    markPicForDeletion(function(){saveItemPic(itemKey, picCanvas2.toDataURL(), picCanvas3.toDataURL());});  
+    clearPreviewPic();
+    document.getElementById("PreviewPic_wrapper").appendChild(picCanvas3); // adds the canvas to wrapper div
+    btnPhotoDelete.show();
+}
+
+btnPhoto.onclick=function(){
+//  alert("Orientation:" + window.orientation);
+//  $("#itemPhoto").trigger("click");  // trigger click on hidden input element
+    if (document.location.protocol == "file:") { // file protocol indicates PhoneGap
+        takePicturePG();
+    } else {
+    // no phonegap, get file from input element files collection
+        document.getElementById("itemPhoto").click(); // trigger click on hidden input element
+    }
+}
+
+btnPhotoReturn.onclick=function(){
+  innerDocNav = true;
+  ChangeForm(frmEnter);
+}
+
+function restorePicFromDeletion(callback){
+// used to undo marked for deletion in the case where a user deleted a photo, but then did not subsequently save
+// the item
+    console.log("in restorePicFromDeletion")  
+
+    if (callback && typeof callback === "function") {
+        cb = callback;
+    }  else {
+        cb = successDB; // use successDB if no callback or an invalid callback is passed
+    }
+
+    if (callback && typeof callback !== "function") {
+        console.warn("invalid callback function passed to restorePicFromDeletion"); // provide invalid callback warning
+    }    
+
+    var sqlList = [];
+    sqlOperation = "UPDATE picData - undo mark for deletion (i.e. restore pic)";
+    sqlList[0] = ["UPDATE picData SET [Status] = 'U' WHERE [Status] = 'D' AND [Item Key] IS NOT NULL;", cb, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+}
+
+function markPicForDeletion(callback){
+console.log("markPicForDeletion - txtMode: " + txtMode.value)  
+// Mark for deletion.  Actual deletion occurs if user saves item from frmEnter
+// Callback to showPreviewPicAndSaveToDB is then used to add new picture to database after existing picture is marked for deletion
+
+    if (callback && typeof callback === "function") {
+        cb = callback;
+    }  else {
+        cb = successDB; // use successDB if no callback or an invalid callback is passed
+    }
+
+    if (callback && typeof callback !== "function") {
+        console.warn("invalid callback function passed to markPicForDeletion"); // provide invalid callback warning
+    }    
+
+    var sqlList = [];
+    if (txtMode.value == "PhotoAdd") { // mark existing temporary row for deletion
+        sqlOperation = "UPDATE picData - mark for deletion in Item Add";
+        sqlList[0] = ["UPDATE picData SET [Status] = 'D' WHERE [Status] = 'T' ;", cb, failDB];
+        console.log(sqlList);
+        Sql(DB, sqlList);
+        
+    } else { // update mode, Item Key is known
+        var itemkey = txtItemKey.valueAsNumber;
+        var status = "U";
+        var args = [itemkey, status];
+        sqlOperation = "UPDATE picData - mark for deletion in Item Update";
+        sqlList[0] = ["UPDATE picData SET [Status] = 'D' WHERE [Item Key] = ? AND [Status] = ?;", args, cb, failDB];
+        console.log(sqlList);
+        Sql(DB, sqlList);
+    }      
+}
+
+function deleteMarked_picData(itemkey) {  // itemkey not passed in Add mode
+console.log("in deletedMarked_picData");
+// delete picData rows selected for deletion in Update mode
+    var sqlList = [];
+    sqlOperation = "Delete picData marked for deletion";
+    if (itemkey) { // if itemkey present, then called from update mode
+        var args = [itemkey];
+        sqlList[0] = ["DELETE FROM picData WHERE [Item Key] = ? AND [Status] = 'D' ;", args, successDB, failDB];
+    } else {
+        sqlList[0] = ["DELETE FROM picData WHERE [Status] = 'D' AND [Item Key] IS NULL;", successDB, failDB]; // Add mode
+    }    
+    
+    console.log(sqlList);
+    Sql(DB, sqlList);
+}
+
+btnPhotoDelete.onclick=function(){
+    markPicForDeletion(successDB);
+    clearPreviewPic();
+    btnPhotoDelete.hide();
+    if (txtMode.value == "Update") { // remind user to save from frmEnter to finalize delete
+        htmlItemPhotoMsg.innerHTML = "<span>Return to main form and save item to confirm photo add/change/delete</span>";
+        setTimeout(function() {htmlItemPhotoMsg.innerHTML = "<span>&nbsp</span>"; htmlItemPhotoMsg.refresh();},3000);  // clear delete message after 1 second
+    }
+}
+
+function clearTemp_picData() { // Clear temporary photos that were never saved with items
+console.log("in clearTemp_picData");
+    var sqlList = [];                
+    var status = "T"
+    var args = [status];
+    sqlOperation = "Delete picData - T Status rows";
+    sqlList[0] = ["DELETE FROM picData WHERE [Status] = ? ;", args, successDB, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+}
+
+function saveItemPic(itemKey, pic, previewPic) {
+//    alert("in savePic");
+    sqlOperation = "INSERT INTO picData";
+    var sqlList = [];
+    var status = "T"; // set to "T" Temp status until Item saved, then status updated to "U" for Unsent 
+                      // when item saved. The picData rows with "T" status are deleted in the initialize_frmEnter
+                      // because it is assumed that the Item was never saved and therefore the related picture
+                      // should be discarded.
+                      // Similarly, picData rows with status "D" are pictures that were
+                      // removed from items using the remove picture button in the Update mode. 
+                      // The "D" status rows are then physically deleted if the Item is then saved while in 
+                      // Update mode. if Status "D" rows are found by the initialize_frmEnter function 
+                      // those rows will have Status restored to "U" for Unsent.  This is done in case the user
+                      // requested picture deletion, but never re-saved the item
+                      // to confirm updates.
+                      
+    var args = [itemKey, pic, previewPic, status];  
+    // no value specified for [Pic Key] so it is assumed null and will auto increment.
+    sqlList[0] = ["INSERT INTO picData ([Item Key], [Pic], [Preview Pic], [Status]) VALUES (?,?,?,?);", args, successDB, failDB];
+    Sql(DB, sqlList);
+}  
+
+function clearPreviewPic() {
+// Get the wrapper element
+    var div = document.getElementById("PreviewPic_wrapper");
+
+// As long as <div> has a child node, remove it
+    while (div.hasChildNodes()) {   
+       div.removeChild(div.firstChild);
+    }
+    btnPhotoDelete.hide();
+}
+
+function updatePhotoItemKey () { // used to tag new photo data with Item Key of last saved Item when in Add mode
+        console.log("in updatePhotoItemKey");
+// NOTE: maybe this should be a select max([Item Key]) to make it table specific
+        sqlOperation = "SELECT max([Item Key]) from equpmentData ItemKey";
+
+//        sqlOperation = "SELECT last_insert_rowid in updatePhotoItemKey";
+        var sqlList = [];
+//        sqlList[0] = ["SELECT last_insert_rowid() AS 'Last Item Key';", getLastItemKeyHandler, failDB ];
+        sqlList[0] = ["SELECT MAX([Item Key]) AS 'Last Item Key' from equipmentData;", updatePhotoItemKeyHandler, failDB ];
+
+        Sql(DB, sqlList);
+}
+
+function updatePhotoItemKeyHandler(transaction, result, itemKey) { // this routine called with DB result set
+                                                                   // in Add mode via callback, or called
+                                                                   // directly with itemKey in Update
+                                                                   // mode. In Update mode, null should passed for 
+                                                                   // transaction and result arguments
+// connect photo to item by update Item Key foreign key on picData
+
+    console.log("in updatePhotoItemKeyHandler");
+    if (result) { // add mode with last Item Key retrieved from DB
+        DBrecords = result;
+        var record;
+        if (DBrecords.rows.length < 1) {
+//            console.warn("in updatePhotoItemKeyHandler: select last_insert_rowid() did not return a value.");
+            console.warn("in updatePhotoItemKeyHandler select max([Item Key]) did not return a value.");
+
+            return;
+        }
+
+        record = DBrecords.rows.item(0);  // one row
+        var key = record["Last Item Key"];
+        console.log("updatePhotoItemKeyHandler Item Key from DB: " + key);
+
+    } else { // result not present, assume update mode
+        var key = itemKey; // used passed in itemKey from Item Update mode
+        console.log("updatePhotoItemKeyHandler Item Key passed in for Update mode: " + key);
+    } 
+//    alert("Last rowid " + record["Last Item Key"]);
+
+    var sqlList = [];
+    var status = "U";  // update pending status T rows to U for unsent
+    var args = [status, key];
+    sqlOperation = "UPDATE picData - update Item Key on picData";
+// callback to initialize_frmEnter to reset form after data save (important to delay initialize_frmEnter till after
+// update so picData status T - temp rows are not deleted before being marked as permanent by update to Status U - unsent.  
+// The initialize_frmEnter function calls clearTemp_picData to clear any abandoned status T picData rows.  Abandoned
+// picData rows occur if the user takes a photo for an item, but never hits save for the item on frmEnter.
+    sqlList[0] = ["UPDATE picData SET [Status] = ?, [Item Key] = ? WHERE [Status] = 'T' ;", args, initialize_frmEnter, failDB];
+    console.log(sqlList);
+    Sql(DB, sqlList);
+}  
+
+function getPreviewPic(itemKey, callback) {
+    console.log(" in getPic");
+        
+//        sqlOperation = "OPEN Database";
+//        DB = SqlOpenDatabase("equipmentData.db", "1.0", "Equipment Database");
+
+        sqlOperation = "SELECT picData for Item Update display";
+        var key = itemKey;
+        var sqlList = [];
+        var args = [key];
+        sqlList[0] = ["Select [Item Key], [Preview Pic] FROM picData WHERE [Item Key] = ?  AND [Status] = 'U';", args, callback, failDB];
+        console.log(sqlList)
+        Sql(DB, sqlList);
+}
+
+function getPreviewPicToPage(transaction, result) {
+    console.log("in getPreviewPicToPage");
+    DBrecords = result;
+    if (DBrecords.rows.length < 1) return; // no preview found
+    var record;
+    record = DBrecords.rows.item(0);  // one row
+    clearPreviewPic(); // make sure there is not a canvas element on the page
+    
+    var picCanvas = document.createElement('canvas');
+    var ctx = picCanvas.getContext("2d");
+    var picName = "PreviewPic";
+    picCanvas.id = picName;
+    picCanvas.style.display = "table"; // center in wrapper div
+    picCanvas.style.margin = "0 auto"; // center in wrapper div
+
+    var image = new Image();
+    image.onload = function(){
+//                       alert("in image.onload");
+                       picCanvas.width = image.width;
+                       picCanvas.height = image.height;
+                       ctx.drawImage(image, 0, 0, image.width, image.height);
+                   };
+//    alert("about to assigne image.src");
+    image.src = record["Preview Pic"]; // load from DB
+    
+// delete existing preview pic, if it exists, and then add new previewPic           
+//    var picName = "PreviewPic";
+//    var elem = document.getElementById(picName);
+//    if (elem) document.getElementById("PreviewPic_wrapper").removeChild(elem);
+
+    document.getElementById("PreviewPic_wrapper").appendChild(picCanvas); // adds the canvas to wrapper div
+    btnPhotoDelete.show();
+}
+
+function getPicURI(evt, imageURI) { // this is called by the onchange event tied to  the "itemPhoto" input element
+
+    if (document.location.protocol == "file:") {
+    // file protocol indicates phonegap
+        var file = imageURI;
+    } else {
+    // no phonegap, get file from input element files collection
+        var files = evt.target.files;
+        var file = files[0]; // set up for one file at a time
+    }
+    displayPic(file);
+}
+// PhoneGap camera API functions
+function takePicturePG() { 
+    options = {
+        quality: 100,
+        destinationType : 1,
+        sourceType : 1,
+        allowEdit: false
+    };
+    //destinationType: destinationType.FILE_URI,'sourceType : Camera.PictureSourceType.CAMERA,
+    
+    alert("in takePicturePG");
+    navigator.camera.getPicture(onPictureReturnedPG, onPictureErrorPG, options);
+};
+
+function onPictureReturnedPG(imageURI) {
+    getPicURI(null, imageURI);
+}
+
+function onPictureErrorPG(message) {
+    NSB.MsgBox("Photo processing failed because " + message);
+}
+
+window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
+window.addEventListener('load', function() {
+  browserWarningMessage('Please use Google Chrome, Apple Safari or another supported browser.');
+  frmEnter.style.display = 'block';
+  if (NSB.enableBrowserArrows) location.hash = '#/frmEnter';
+  Main();
+  if (typeof(frmEnter.onshow)=='function') frmEnter.onshow();
+}, false);
+/* ============================================= Globals and Utility Functions ================================= */
+// Initialize localStorage settings variables, if not present
+if (localStorage.getItem("DefaultCustomer") === null) {
+    localStorage.setItem("DefaultCustomer", "Customer Not Set");
+}
+if (localStorage.getItem("DefaultProject") === null) {
+    localStorage.setItem("DefaultProject", "Project Not Set");
+}
+if (localStorage.getItem("PhotoUpload") === null) {
+    localStorage.setItem("PhotoUpload", "true");
+}
+if (localStorage.getItem("RotatePhoto") === null) {
+    localStorage.setItem("RotatePhoto", "true");
+}
+
+if (localStorage.getItem("RotatePhotoDegrees") === null) {
+    localStorage.setItem("RotatePhotoDegrees", 90);
+}
+
+/* =========================================== Page Background ================================================= */
+// Note: background changed to just use background color because gradient was starting over if page scrolled when
+// mobile keyboard was present
+
+//NSBPage.style.backgroundImage="linear-gradient(#0000b3, #000080)";
+// Gradient builder: http://www.cssportal.com/css-gradient-generator/
+//NSBPage.style.backgroundImage="-webkit-linear-gradient(bottom, #1e5799 0%, #207CCA 51%, #7db9e8 100%)";
+
+NSBPage.style.backgroundColor="#b2b2b2";
+
+/**
+* Geo Location 
+*/
+var geoCoords = [999999,999999]; // latitude, longitude
+
+function getLocationError (err) {
+    console.log("in getLocationError")
+    console.warn('ERROR(' + err.code + '): ' + err.message);
+    geoCoords = [999999,999999];
+};
+
+function getLocationSuccess (pos) {
+    console.log("in getLocationSuccess")
+    var crd = pos.coords;
+    geoCoords = [crd.latitude, crd.longitude]; // global two element coordinates array used in insertRow function
+//    console.log('Your current position is:');
+//    console.log('Latitude : ' + crd.latitude);
+//    console.log('Longitude: ' + crd.longitude);
+//    console.log('More or less ' + crd.accuracy + ' meters.');
+
+};
+
+function getLocation () {
+// Get Location with 5 minute age and 40 second timeout
+    var options = {
+      maximumAge: 300000, 
+      timeout: 40000,
+      enableHighAccuracy: false
+    };
+
+    navigator.geolocation.getCurrentPosition(getLocationSuccess, getLocationError, options);
+};
+
+/**
+* Device orientation 
+*/
+function applyOrientation() {
+//    alert(window.orientation);
+    deviceOrientation = "U"; // unknown orientation
+    if (window.hasOwnProperty("orientation")) {
+        if (window.orientation === 90 || window.orientation === -90) {
+            deviceOrientation = "L";
+        } else {
+            deviceOrientation = "P";
+        }
+     }
+ 
+//    if (window.innerHeight > window.innerWidth) {
+//        alert("You are now in portrait");
+//        deviceOrientation = "P"
+//    } else {
+//        alert("You are now in landscape");
+//        deviceOrientation = "L"
+//    }
+
+}
+
+window.onload = function (event) {
+    applyOrientation(); // set global variable to P, L, or U for portrait, landscape, or Unknown.
+                        // Used to determine if picture rotation is necessary.
+}
+
+window.onresize = function (event) {
+  applyOrientation();
+}
+
+/**
+* Picture upload globals 
+*/
+var uploadPicCount = 0;
+var uploadPicResponseCount = 0;
+
+/**
+* AJAX Submit globals 
+*/
+var rowsSent = 0;
+var sendErrors = 0;
+
+//test
+//var appScriptWebService = "https://script.google.com/macros/s/AKfycbyz5IhKCjYO-yFIBf8e9TF0BX1V8n06drwboRRiW01-l98PsNs/exec";
+
+// multi row test
+// var appScriptWebService = "https://script.google.com/macros/s/AKfycbw63hE52nZAYsJ7zBtJ6vCXY5sA5zQOFnNd3XjmB1yCOOQo6Hu9/exec";
+
+// prod
+// var appScriptWebService = "https://script.google.com/macros/s/AKfycbylF_kBJWLC-gfbs7qrnKgUPSAhfiwLp4mXREze-WLneQfqgXy5/exec";
+// ver 3.0 multi row with photo URL
+// justin@availrecovery.com
+// var appScriptWebService = "https://script.google.com/macros/s/AKfycbyLg6FYUPNScsuLJWhCjjMo6OBgq4PUPFjlotM7LaT2h1372JY/exec";
+// availrecovery@gmail.com
+var appScriptWebService = "https://script.google.com/macros/s/AKfycbyvDnkUQ3eWTJPSFug3HiyhiTTiXKM0DxiR8tghuk5aFcgNv-Oq/exec";
+
+/**
+* Google OAUTH and Google API Globals 
+*/
+var driveFolder = ['0B4_14Sw5Fnx4OFpBY1BkaFIxS1k']; // Equipment App Photos on availrecovery@gmail.com
+// var driveFolder = '0B_ogwGr0xoHKcS14TURoNTZ3Tnc';  // randy.tinkle@gmail.com
+// var driveFolder = '0B-k6PaKiq6QcamtmcGJrczZ3OUU'; // justin@availrecovery.com
+
+var apiScopes = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/script.storage'];  // full access
+var apiScriptId = "MAWdAqPhAiD1XN5tLxIJxjHB-QGCKAykT"; // api server side script
+
+// Client ID retrieved from project in the Google
+// Developer Console, https://console.developers.google.com
+// var apiClientId = "774296715659-06aitv9vc0cn6tn8c67r6nv944g7j1qf.apps.googleusercontent.com"; // availrecover@gmail
+var apiClientId = '550105031461-mj6vu4q8kbgl6tfefnavgnve2lpqfvb2.apps.googleusercontent.com'; // RTT Account
+// var apiClientId = '546344415976-28fv09vl8dh175iq7b25qcd12igchlqg.apps.googleusercontent.com'; // JRT Account
+//      var apiScopes = ['https://www.googleapis.com/auth/drive.metadata.readonly'];
+// var apiScopes = ['https://www.googleapis.com/auth/drive'];  // full access
+
+/**
+* SQL Globals and Initialization 
+*/
+var DB; // The database
+var DBrecords; // The current set of selected database records
+var sqlOperation;
+
+var schemaVersion = 3.3; // schema change triggers drop/create for equipmentData and picData tables;
+                         // warning: a change in version number will clear app data on device and unsubmitted
+                         // data will be lost.
+                         
+var sqlCreate_equipmentData = "CREATE TABLE IF NOT EXISTS equipmentData('Item Key' INTEGER, 'Category', 'Asset Tag Number'" +
+                              ", 'Serial Number', 'Make', 'Model', 'Item Qty', 'Customer', 'Project'" + 
+                              ", 'User Email', 'Collected Date', 'Location Lat', 'Location Long'" +
+                              ", 'Processor Type', 'Processor Qty', 'Processor Part Number', 'Memory Type'" +
+                              ", 'Memory Qty', 'Memory Part Number', 'Storage Type', 'Storage Qty'" +
+                              ", 'Storage Part Number', 'Other Feature Type', 'Other Feature Qty'" + 
+                              ", 'Other Feature Part Number', 'Condition Notes', 'Monitor Size'" +
+                              ", 'Drive Serial Numbers', 'Photo URL', 'Sent', PRIMARY KEY('Item Key') );";
+                              
+var sqlCreate_versionInfo = "CREATE TABLE IF NOT EXISTS versionInfo('Component', 'Version'" +
+                            ", PRIMARY KEY('Component'));";
+
+var sqlCreate_picData = "CREATE TABLE IF NOT EXISTS picData('Pic Key' INTEGER, 'Item Key' INTEGER, 'Pic', 'Preview Pic'" +
+                            ", 'Status', PRIMARY KEY('Pic Key'));";
+
+var sqlCreate_picData_itemKey_idx = "CREATE INDEX IF NOT EXISTS picData_itemKey_idx ON picData ([Item Key]);";
+
+//Create database if it does not exist
+sqlOperation = "OPEN Database";
+DB = SqlOpenDatabase("equipmentData.db", "1.0", "Equipment Database");
+
+// Create tables if they don't yet exist (NOTE: equipmentData and picData are created in versionCheck
+// callback function triggered by versionInfo select statement below)
+sqlOperation = "CREATE TABLE versionInfo";
+var sqlList = [];
+sqlList[0] = [sqlCreate_versionInfo, successDB, failDB];
+Sql(DB, sqlList);
+
+var key = "Schema";
+var sqlList = [];
+var args = [key];
+sqlList[0] = ["Select [Version] FROM versionInfo WHERE [Component] = ?;", args, versionCheck, failDB ];
+Sql(DB, sqlList);
+
+function versionCheck(transaction, result) {
+    console.log("in versionCheck");
+
+    DBrecords = result;
+    var record;
+    if (DBrecords.rows.length == 0) { // insert version record on first app run 
+        sqlOperation = "INSERT INTO versionInfo";
+        var sqlList = [];
+        var args = ["Schema", schemaVersion];
+        sqlList[0] = ["INSERT INTO versionInfo ([Component], [Version]) VALUES (?,?);", args, successDB, failDB];
+        Sql(DB, sqlList);
+// since no version row was found in versionInfo, try to drop equipmentData and picData in case they
+// are a pre-version tracking version that therefore needs to be dropped so they
+// can be recreated with current schema
+        sqlOperation = "DROP TABLE equipmentData";
+        var sqlList = [];
+        sqlList[0] = ["DROP TABLE IF EXISTS equipmentData;", successDB, failDB];
+        Sql(DB, sqlList);
+
+        sqlOperation = "DROP IF EXISTS picData and picData_itemKey_idx";
+        var sqlList = [];
+//        sqlList[0] = ["DROP INDEX IF EXISTS picData_itemKey_idx;", successDB, failDB];
+        sqlList[0] = ["DROP TABLE IF EXISTS picData;", successDB, failDB];
+        Sql(DB, sqlList);
+
+    } else {  // version row exists, check if equipmentData table needs to be recreated due to schema version change
+        record = DBrecords.rows.item(0); // should only be one row
+        var version = record["Version"];
+        console.log("versionCheck curr version | new version: " + version + " | " + schemaVersion);
+        if (version != schemaVersion) {  // drop equipmentData, will be rebuilt in CREATE TABLE statement below
+            sqlOperation = "DROP TABLE equipmentData";
+            var sqlList = [];
+            sqlList[0] = ["DROP TABLE IF EXISTS equipmentData;", successDB, failDB];
+            Sql(DB, sqlList);
+            
+            sqlOperation = "DROP TABLE picData and picData_itemKey_idx";
+            var sqlList = [];
+//            sqlList[0] = ["DROP INDEX IF EXISTS picData_itemKey_idx;", successDB, failDB];
+            sqlList[0] = ["DROP TABLE IF EXISTS picData;", successDB, failDB];
+            Sql(DB, sqlList);
+          
+// Update version table with new version number
+            var sqlList = [];
+            var key = "Schema";
+            var args = [schemaVersion, key];
+            sqlOperation = "UPDATE versionInfo";
+            sqlList[0] = ["UPDATE versionInfo SET [Version] = ? WHERE [Component] = ? ;", args, successDB, failDB];
+            console.log(sqlList);
+            Sql(DB, sqlList);
+        }
+    } // end else
+// Create (or recreate) equipmentData and picData, if necessary, due to version change or
+// if it is the first run of app.  Note that the equipmentData and picData tables are not dropped if
+// if the schema version number has not changed.  If there is not a version change, 
+// equipmentData and picData are to perist across application sessions and are therefore not dropped in version check
+// logic above.  At this point, it is assumed that an existing table has correct schema and therefore will not be 
+// rebuilt due to the "IF NOT EXISTS" clause in the CREATE TABLE statement below.
+    sqlOperation = "CREATE IF NOT EXISTS equipmentData, picData and picData_itemKey_idx";
+    var sqlList = [];
+    sqlList[0] = [sqlCreate_picData, successDB, failDB]; // callback to create index once table is built
+    sqlList[1] = [sqlCreate_equipmentData, successDB, failDB];
+    sqlList[2] = [sqlCreate_picData_itemKey_idx, successDB, failDB];
+
+    console.log(sqlList);
+    Sql(DB, sqlList);
+};
+
+/**
+* Navigation
+* Logic to handle back browser button behavior via onhashchange event.   This is done to make web
+* app behave more like a native app when using back key to exit the application 
+* gracefully rather than bounce back through browser page history.
+* There is an an element created below to display a message in the case where the 
+* user uses the mobile device back button on the main form (frmEnter).   There is
+* additional code in the window.onhashchange event that prevents back browser navigation
+* on other application pages.
+*/
+
+// hashtag navigation globals
+var currForm;
+var hashChangeCount = 0;
+var eatHistoryCount = 0;
+var eatHistory = false;
+var innerDocNav = false;
+var bounce = false;
+
+var elemDiv = document.createElement('div');
+elemDiv.id = "avail-exit";
+elemDiv.style.cssText = 'width:100%;height:100%;background:#b2b2b2;display:none';
+elemDiv.innerHTML = 'Leaving application...'; 
+window.document.body.insertBefore(elemDiv, window.document.body.firstChild);
+
+//            var loc = window.location; // => "http://example.com:3000/pathname/?search=test#hash"
+                                 //  loc.protocol;  => "http:"
+                                 //  loc.host;      => "example.com:3000"
+                                 //  loc.hostname;  => "example.com"
+                                 //  loc.port;      => "3000"
+                                 //  loc.pathname;  => "/pathname/"
+                                 //  loc.hash;      => "#hash"
+                                 //  loc.search;    => "?search=test"      
+
+window.onhashchange = function(e) {
+
+//    alert("history.length: " + window.history.length + " eatHistoryCount: " + eatHistoryCount);
+    hashChangeCount++;
+    var loc = window.location;
+//    alert("in windowonhashchange: " + loc.hash);
+    console.log("in windowonhashchange: " + loc.hash);
+    var h = loc.hash;
+    if (h.substring(2, h.length) == "frmUtil") {console.log("on hash return for frmUtil"); return;}  // allow hash change navigation to frmUtility  
+
+    if (eatHistory) {
+        if (eatHistoryCount == 2) { // show message block since next page is last in history
+        
+            var elem = document.getElementById("avail-exit");
+            elem.style.display = "block";  // display exit confirmation message
+// after a brief pause, prompt user to hit back button again. This is necessary 
+// if running from a home screen shortcut and provides a more native-app
+// like experience when leaving application.
+            setTimeout(function(){
+                                  elem.innerHTML = "Press Back Button again to exit application.";
+                                 }, 500);
+        } else {
+            if (eatHistoryCount == 1) {
+                eatHistory = false; // the job is done
+            } else {
+                eatHistoryCount-- ;
+//                alert("after decrement eatHistoryCount: " + eatHistoryCount);
+                window.history.back(); // trigger next iteration of onhashchange event
+            } // end else
+        }  // end else  
+    return;
+} // end if for eatHistory     
+    if (bounce) {bounce = false; return;} // arrived here by bouncing back to current form, so just return
+
+    if (!innerDocNav && hashChangeCount > 1) { // navigation occurred outside of UI, must be back browser
+//        alert("back browser");
+        if (currForm == "frmEnter") { 
+            eatHistory = true;
+            eatHistoryCount = window.history.length - 1;
+            document.getElementById("NSBPage").style.display = "none";
+            window.history.back(); // trigger net iteration of window.onhashchange
+//          return;
+        } else  { // user not on main form, bounce forward to form where
+                  // back browser button was pressed (essentially cancelling back
+                  //   browser navigation)
+      
+            bounce = true;
+            window.history.forward();
+        } // end else
+    } // end if for window.innerDocNav
+} // end function
+</script>
+
+</body>
+</html>
